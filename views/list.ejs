@@ -1,0 +1,1847 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <% include partial/head %>
+        <title>Default tables &mdash; The Right Way - Admin Template</title>
+    </head>
+    <body>
+
+        <!-- PAGE WRAPPER -->
+        <div class="page page--w-header">
+
+            <!-- PAGE HEADER -->
+            <header class="page__header">
+                <div class="logo-holder">
+                    <a href="/" class="logo-text d-none d-lg-block"><strong class="text-primary">#</strong> THE <strong>RIGHT WAY</strong></a>
+                    <a href="/" class="logo-text d-lg-none"><strong class="text-primary">#</strong><strong>RW</strong></a>
+                    <div class="rw-btn rw-btn--nav" data-action="aside-hide"><span></span></div>
+                </div>
+                <div class="box">
+                    <form class="page-header-search" id="header_search">
+                        <input type="text" class="form-control" placeholder="Type in to search">
+                        <div class="page-header-search__icon"></div>
+                    </form>
+                </div>
+                <div class="box-fluid">
+
+                </div>
+
+            </header>
+            <!-- //END PAGE HEADER -->
+
+            <!-- PAGE CONTENT WRAPPER -->
+            <div class="page__content page__content--w-aside-fixed" id="page-content">
+
+                <!-- PAGE ASIDE PANEL -->
+                <div class="page-aside invert" id="page-aside">
+                    <div class="scroll" style="max-height: 100%">
+                    <div class="navigation" id="navigation-default">
+
+                        <div class="user user--bordered user--lg user--w-lineunder user--controls">
+                            <img src="http://via.placeholder.com/128x128">
+                            <div class="user__name">
+                                <strong>Dmitry Ivaniuk</strong><br>
+                                <span class="text-muted">Administrator</span>
+
+                                <div class="user__controls">
+                                    <div class="dropdown">
+                                        <button class="btn btn-light btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-cog"></span></button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Profile</a>
+                                            <a class="dropdown-item" href="#">Projects</a>
+                                            <a class="dropdown-item" href="#">Invoices</a>
+                                            <a class="dropdown-item" href="#">Settings</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Log out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user__lineunder">
+                                <div class="text">
+                                    Last visit 15min ago
+                                </div>
+                                <div class="buttons">
+                                    <div class="dropdown">
+                                        <button class="button button-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Profile</a>
+                                            <a class="dropdown-item" href="#">Projects</a>
+                                            <a class="dropdown-item" href="#">Invoices</a>
+                                            <a class="dropdown-item" href="#">Settings</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Log out</a>
+                                        </div>
+                                    </div>
+                                    <div class="button button-minimize" data-action="aside-minimize" data-toggle="tooltip" data-placement="top" data-original-title="Minimize navigation"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <ul>
+                                <li class="title">Main</li>
+                                <li>
+                                    <a href="index.html">
+                                        <span class="icon li-home"></span>
+                                        <span class="text">Dashboard</span>
+                                    </a>
+                                </li>
+
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-document"></span>
+                                        <span class="text">Pages</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="pages-gallery.html" class="no-icon">
+                                                <span class="text">Gallery</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pages-user-contacts.html" class="no-icon">
+                                                <span class="text">User contacts</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pages-user-profile.html" class="no-icon">
+                                                <span class="text">User profile</span>
+                                            </a>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Payment</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="pages-payments-list.html" class="no-icon">
+                                                        <span class="text">List of invoices</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="pages-payments-invoice.html" class="no-icon">
+                                                        <span class="text">Invoice</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">FAQ</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="pages-faq.html" class="no-icon">
+                                                        <span class="text">Example 1</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="pages-faq-2.html" class="no-icon">
+                                                        <span class="text">Example 2</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="pages-contact-us.html" class="no-icon">
+                                                <span class="text">Contact us</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pages-calendar.html" class="no-icon">
+                                                <span class="text">Calendar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pages-login.html" class="no-icon">
+                                                <span class="text">Login page</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pages-registration.html" class="no-icon">
+                                                <span class="text">Registration</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-group-work"></span>
+                                        <span class="text">Business solutions</span>
+                                    </a>
+
+                                    <ul>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Banking</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="solutions-banking-main.html" class="no-icon">
+                                                        <span class="text">Account</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="solutions-banking-cards.html" class="no-icon">
+                                                        <span class="text">Personal cards</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="solutions-banking-activity.html" class="no-icon">
+                                                        <span class="text">Activity</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Marketing researches</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="solutions-markeing-classifier.html" class="no-icon">
+                                                        <span class="text">Classifier</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="solutions-markeing-research.html" class="no-icon">
+                                                        <span class="text">Marketing research</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="solutions-markeing-production.html" class="no-icon">
+                                                        <span class="text">Production</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">CRM system</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="solutions-crm-main.html" class="no-icon">
+                                                        <span class="text">Recent projects</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="solutions-crm-operators.html" class="no-icon">
+                                                        <span class="text">Operators</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="solutions-crm-project.html" class="no-icon">
+                                                        <span class="text">Project</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Smart house</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="solutions-smarthouse-main.html" class="no-icon">
+                                                        <span class="text">Room controls</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="solutions-smarthouse-air.html" class="no-icon">
+                                                        <span class="text">Air conditioning</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="solutions-trading-main.html" class="no-icon">
+                                                <span class="text">Trading platform</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="title">Interface</li>
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-laptop-phone"></span>
+                                        <span class="text">Elements</span>
+                                    </a>
+
+                                    <ul>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Cards</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="ui-cards-basic.html" class="no-icon">
+                                                        <span class="text">Basic examples</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-cards-image-group.html" class="no-icon">
+                                                        <span class="text">Card image & groups</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-cards-container-dividers.html" class="no-icon">
+                                                        <span class="text">Card container & dividers</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="ui-buttons.html" class="no-icon">
+                                                <span class="text">Buttons</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-dropdowns.html" class="no-icon">
+                                                <span class="text">Dropdowns</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-alerts-badges.html" class="no-icon">
+                                                <span class="text">Alerts, badges & tags</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-modals.html" class="no-icon">
+                                                <span class="text">Modals</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-popovers-tooltips.html" class="no-icon">
+                                                <span class="text">Popovers & tooltips</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-tabs-pills.html" class="no-icon">
+                                                <span class="text">Tabs & pills</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-list-group.html" class="no-icon">
+                                                <span class="text">List group</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-typography.html" class="no-icon">
+                                                <span class="text">Typography</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-pen-add"></span>
+                                        <span class="text">Components</span>
+                                    </a>
+
+                                    <ul>
+                                        <li>
+                                            <a href="ui-widgets.html" class="no-icon">
+                                                <span class="text">Widgets</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-timeline.html" class="no-icon">
+                                                <span class="text">Timeline</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-users.html" class="no-icon">
+                                                <span class="text">Users</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-rating.html" class="no-icon">
+                                                <span class="text">Rating</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-loaders.html" class="no-icon">
+                                                <span class="text">Loaders</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-navigations.html" class="no-icon">
+                                                <span class="text">Navigations</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-page-headers.html" class="no-icon">
+                                                <span class="text">Page headers</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="ui-progress.html" class="no-icon">
+                                                <span class="text">Progress</span>
+                                            </a>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Icons</span>
+                                            </a>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="ui-icons-fa.html" class="no-icon">
+                                                        <span class="text">FontAwesome</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-icons-li.html" class="no-icon">
+                                                        <span class="text">Linearicons</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-icons-box.html" class="no-icon">
+                                                        <span class="text">Icon features</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-layers"></span>
+                                        <span class="text">Forms</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="forms-elements.html" class="no-icon">
+                                                <span class="text">Form elements</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="forms-datepickers-select.html" class="no-icon">
+                                                <span class="text">Datepicker & select</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="forms-layouts.html" class="no-icon">
+                                                <span class="text">Form layouts</span>
+                                            </a>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Form validation</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="forms-validation-engine.html" class="no-icon">
+                                                        <span class="text">Validation engine</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="forms-validation-masked.html" class="no-icon">
+                                                        <span class="text">Masked inputs</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="forms-validation-default.html" class="no-icon">
+                                                        <span class="text">Default</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="forms-input-groups.html" class="no-icon">
+                                                <span class="text">Input groups</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="forms-features.html" class="no-icon">
+                                                <span class="text">Form features</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="forms-sizing-grid.html" class="no-icon">
+                                                <span class="text">Form sizing & grid</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="forms-range-slider.html" class="no-icon">
+                                                <span class="text">Range slider</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="forms-wizard.html" class="no-icon">
+                                                <span class="text">Form wizard</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="forms-editors.html" class="no-icon">
+                                                <span class="text">WYSIWYG editors</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-pie-chart"></span>
+                                        <span class="text">Charts</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="charts-chartjs.html" class="no-icon">
+                                                <span class="text">Chart.js</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="charts-echarts.html" class="no-icon">
+                                                <span class="text">Echarts</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="charts-knob.html" class="no-icon">
+                                                <span class="text">Knob</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="charts-other.html" class="no-icon">
+                                                <span class="text">Other</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-menu-square"></span>
+                                        <span class="text">Tables</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="tables-default.html" class="no-icon">
+                                                <span class="text">Default tables</span>
+                                            </a>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">DataTables plugin</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="tables-datatables.html" class="no-icon">
+                                                        <span class="text">Basic examples</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="tables-datatables-buttons.html" class="no-icon">
+                                                        <span class="text">Buttons extension</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="tables-datatables-responsive.html" class="no-icon">
+                                                        <span class="text">Responsive extension</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-map-marker"></span>
+                                        <span class="text">Maps</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="maps-google.html" class="no-icon">
+                                                <span class="text">Google maps</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="maps-echarts.html" class="no-icon">
+                                                <span class="text">Echarts maps</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="title">Template options</li>
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-layers"></span>
+                                        <span class="text">Layout examples</span>
+                                    </a>
+                                    <ul>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Default</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="layouts_blank_default_header_aside_sidepanel.html" class="no-icon">
+                                                        <span class="text">Header, navigation & sidepanel</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_default_header_aside.html" class="no-icon">
+                                                        <span class="text">Header & aside navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_default_header_cnav.html" class="no-icon">
+                                                        <span class="text">Header & content navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_default_header_topnav.html" class="no-icon">
+                                                        <span class="text">Header & top navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_default_header.html" class="no-icon">
+                                                        <span class="text">Header only</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_default_content.html" class="no-icon">
+                                                        <span class="text">Content only</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Boxed</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="layouts_blank_boxed_header_aside_sidepanel.html" class="no-icon">
+                                                        <span class="text">Header, navigation & sidepanel</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_boxed_header_aside.html" class="no-icon">
+                                                        <span class="text">Header & left navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_boxed_header_cnav.html" class="no-icon">
+                                                        <span class="text">Header & content navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_boxed_header_topnav.html" class="no-icon">
+                                                        <span class="text">Header & top navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_boxed_header.html" class="no-icon">
+                                                        <span class="text">Header only</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_boxed_content.html" class="no-icon">
+                                                        <span class="text">Content only</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="openable">
+                                            <a href="#" class="no-icon">
+                                                <span class="text">Indent</span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header_container_single.html" class="no-icon">
+                                                        <span class="text">Single header & container</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header_container_combined.html" class="no-icon">
+                                                        <span class="text">Combined header & container</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header_single.html" class="no-icon">
+                                                        <span class="text">Single header option</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header_aside_sidepanel.html" class="no-icon">
+                                                        <span class="text">Header, navigation & sidepanel</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header_aside.html" class="no-icon">
+                                                        <span class="text">Header & left navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header_cnav.html" class="no-icon">
+                                                        <span class="text">Header & content navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header_topnav.html" class="no-icon">
+                                                        <span class="text">Header & top navigation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_header.html" class="no-icon">
+                                                        <span class="text">Header only</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="layouts_blank_indent_content.html" class="no-icon">
+                                                        <span class="text">Content only</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </div>
+                    </div>
+                </div>
+                <!-- //END PAGE ASIDE PANEL -->
+
+
+
+                <!-- PAGE CONTENT CONTAINER -->
+                <div class="content" id="content">
+
+                    <!-- PAGE HEADING -->
+                    <div class="page-heading">
+                        <div class="page-heading__container">
+                            <div class="icon">
+                                <span class="li-menu-square"></span>
+                            </div>
+                            <h1 class="title">Default tables</h1>
+                            <p class="caption">The Right Way - Admin Template</p>
+                        </div>
+
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="#">Components</a></li>
+                                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                                <li class="breadcrumb-item active">Default tables</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- //END PAGE HEADING -->
+
+                    <div class="container-fluid">
+
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-default">Default table</h4>
+                                <p class="subtitle margin-bottom-20">Add <code>.table</code> class to basic <code>&lt;table&gt;</code> to get styled table.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="t1_select_all">
+                                                    <label class="custom-control-label" for="t1_select_all"></label>
+                                                </div>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="t1_checkbox_1" checked>
+                                                    <label class="custom-control-label" for="t1_checkbox_1"></label>
+                                                </div>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="t1_checkbox_2" checked>
+                                                    <label class="custom-control-label" for="t1_checkbox_2"></label>
+                                                </div>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="t1_checkbox_3">
+                                                    <label class="custom-control-label" for="t1_checkbox_3"></label>
+                                                </div>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="t1_checkbox_4" checked>
+                                                    <label class="custom-control-label" for="t1_checkbox_4"></label>
+                                                </div>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-stripped">Stripped</h4>
+                                <p class="subtitle margin-bottom-20">Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-striped margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-bordered">Bordered table</h4>
+                                <p class="subtitle margin-bottom-20">Add <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-hoverable">Hoverable rows</h4>
+                                <p class="subtitle margin-bottom-20">Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-indent">Indent rows</h4>
+                                <p class="subtitle margin-bottom-20">Add <code>.table-indent-rows</code> to get margins between rows.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-indent-rows margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+
+                                <h5 class="margin-top-30">Hoverable rows</h5>
+                                <p class="subtitle">Also supports every modifier that you can use in default table.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-indent-rows table-hover margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-card">Table as card component</h4>
+                                <p class="subtitle margin-bottom-0">Do not wrap it with <code>.card-body</code>.</p>
+
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-head">Table head options</h4>
+                                <p class="subtitle margin-bottom-20">Use <code>.thead-dark</code> or <code>.thead-light</code> to customize your table th.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table margin-bottom-0">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card margin-bottom-0">
+                            <div class="card-container">
+                                <div class="dropdown">
+                                    <div class="rw-btn rw-btn--card" data-toggle="dropdown"><div></div></div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item" data-demo-action="update">Update</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="expand">Expand</a>
+                                        <a href="#" class="dropdown-item" data-demo-action="invert">Invert style</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item" data-demo-action="remove">Remove card</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 id="rw-tb-default">Dark style</h4>
+                                <p class="subtitle margin-bottom-20">You can invert colors using <code>.table-dark</code> class, or wrap this table into <code>.invert</code>ed container.</p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-dark margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="40">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Spent</th>
+                                            <th scope="col">Nickname</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                John Doe
+                                            </th>
+                                            <td>
+                                                $5,350
+                                            </td>
+                                            <td>
+                                                @johndoe
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Sarah Birmington
+                                            </th>
+                                            <td>
+                                                $1,220
+                                            </td>
+                                            <td>
+                                                @sarahbirm
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">Active</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Josh Volkowic
+                                            </th>
+                                            <td>
+                                                $2,591
+                                            </td>
+                                            <td>
+                                                @volkowic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">Removed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked>
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <th scope="row">
+                                                Elisabeth Konnor
+                                            </th>
+                                            <td>
+                                                $9,111
+                                            </td>
+                                            <td>
+                                                @e_konnor
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- //END PAGE CONTENT CONTAINER -->
+
+            </div>
+            <!-- //END PAGE CONTENT -->
+
+        </div>
+        <!-- //END PAGE WRAPPER -->
+
+
+        <% include partial/script %>
+    </body>
+</html>

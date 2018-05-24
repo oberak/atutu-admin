@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include partial/head %>
+        <title>Blank page &mdash; The Right Way - Admin Template</title>
+    </head>
+    <body>
+        <!-- PAGE WRAPPER -->
+        <div class="page page--w-header">
+          <% include partial/header %>
+            <!-- PAGE CONTENT WRAPPER -->
+            <div class="page__content page__content--w-aside-fixed" id="page-content">
+              <% include partial/leftside %>
+
+                <!-- PAGE CONTENT CONTAINER -->
+                <div class="content" id="content">
+
+                    <!-- PAGE HEADING -->
+                    <div class="page-heading">
+                        <div class="page-heading__container">
+                            <h1 class="title">H1 page heading</h1>
+                            <p class="caption">Page subtitle goes here</p>
+                        </div>
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Linked item</a></li>
+                                <li class="breadcrumb-item active">Active item</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- //END PAGE HEADING -->
+
+                    <div class="container-fluid">
+
+                        <% include partial/rightside %>
+
+                        <% include partial/footer %>
+
+                    </div>
+                </div>
+                <!-- //END PAGE CONTENT CONTAINER -->
+
+            </div>
+            <!-- //END PAGE CONTENT -->
+
+        </div>
+        <!-- //END PAGE WRAPPER -->
+      <% include partial/script %>
+    </body>
+</html>

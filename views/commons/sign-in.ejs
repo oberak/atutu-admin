@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <% include ../partial/head %>
+        <title>Login &mdash; The Atutu - Admin </title>
+    </head>
+    <body>
+        <!-- PAGE WRAPPER -->
+        <div class="page">
+
+            <!-- PAGE CONTENT WRAPPER -->
+            <div class="page__content" id="page-content">
+
+                <!-- PAGE LOGIN CONTAINER -->
+                <div class="important-container login-container">
+
+                    <div class="content">
+
+                        <a href="/" class="logo-holder logo-holder--lg logo-holder--wide">
+                            <div class="logo-text"><strong class="text-primary">#</strong> <strong>Atutu</strong></div>
+                        </a>
+                        <p class="caption text-center margin-bottom-30">Welcome to <strong>Atutu</strong> admin </p>
+
+                        <form action="/" method="post" autocomplete="off">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" class="form-control" placeholder="Email or phone">
+                            </div>
+                            <div class="form-group margin-bottom-20">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Your password" autocomplete="new-password">
+                            </div>
+
+                            <div class="form-group margin-bottom-30">
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" checked="">
+                                            <span class="custom-control-label">Remember me</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <a href="#">Forgot password?</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group margin-bottom-30">
+                                <div class="form-row">
+                                    <div class="col-2"></div>
+                                    <div class="col-8">
+                                        <button class="btn btn-primary btn-block">Login to account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="divider"></div>
+
+                        <div class="form-group text-center">
+                            <div class="form-row">
+                                <div class="col-4">
+                                    <a href="#" class="text-muted">About us</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#" class="text-muted">Contacts</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#" class="text-muted">Support</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- PAGE LOGIN CONTAINER -->
+
+                <!-- PAGE CONTENT CONTAINER -->
+                <div class="content d-none d-lg-block" id="content" style="background: url(/img/signin.jpg) left center no-repeat; background-size: 100% auto;"></div>
+                <!-- //END PAGE CONTENT CONTAINER -->
+
+            </div>
+            <!-- //END PAGE CONTENT -->
+
+        </div>
+        <!-- //END PAGE WRAPPER -->
+
+
+        <% include ../partial/script %>
+    </body>
+</html>
