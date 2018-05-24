@@ -1,3 +1,3 @@
 # atutu-admin
 Admin for Atutu
-init team A
+init by team A
