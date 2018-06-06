@@ -22,26 +22,23 @@
                         </a>
                         <p class="caption text-center margin-bottom-30">Welcome to <strong>Atutu</strong> admin </p>
 
-                        <form action="/" method="post" autocomplete="off">
+                        <form name="frm" action="/signin" method="post" autocomplete="off">
                             <div class="form-group">
                                 <label>Username</label>
-                                <input type="text" class="form-control" placeholder="Email or phone">
+                                <input type="text" name="email" class="form-control" placeholder="Email or phone">
                             </div>
                             <div class="form-group margin-bottom-20">
                                 <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Your password" autocomplete="new-password">
+                                <input type="password" name="password" class="form-control" placeholder="Your password" autocomplete="new-password">
                             </div>
 
                             <div class="form-group margin-bottom-30">
                                 <div class="form-row">
                                     <div class="col-6">
                                         <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" checked="">
-                                            <span class="custom-control-label">Remember me</span>
+                                            <input type="checkbox" name="rememberme" id="rememberme" class="custom-control-input" checked="">
+                                            <span class="custom-control-label" for="rememberme">Remember me</span>
                                         </label>
-                                    </div>
-                                    <div class="col-6 text-right">
-                                        <a href="#">Forgot password?</a>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +47,7 @@
                                 <div class="form-row">
                                     <div class="col-2"></div>
                                     <div class="col-8">
-                                        <button class="btn btn-primary btn-block">Login to account</button>
+                                        <button class="btn btn-primary btn-block" type="submit">Login to account</button>
                                     </div>
                                 </div>
                             </div>
@@ -87,5 +84,26 @@
 
 
         <% include ../partial/script %>
+        <script type="text/javascript">
+        $(function () {
+
+        // when submit
+        frm.onsubmit = function(){
+          if(frm.rememberme.checked){
+            //if checked remember then save cookieParser
+            $.cookie("email", frm.email.value, { expires:7});
+          }else{
+            //else remove cookies
+            $.removeCookie("email");
+          }
+        }
+
+        //on load
+        if($.cookie("email")){
+          frm.email.value = $.cookie("email");
+          frm.rememberme.checked = true;
+        }
+    });
+    </script>
     </body>
 </html>

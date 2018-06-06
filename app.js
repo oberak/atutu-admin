@@ -3,9 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
+var session = require('express-session');
+var flash = require('express-flash');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/users');  
 
 var app = express();
 
@@ -18,6 +21,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Set up mongoose connection
+mongoose.connect('mongodb://127.0.0.1/atutudb');// dirverName://dbIP/dbName
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+//session
+app.use(session({
+  secret: 'XailEJS#@S12S', //any string for Security
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(flash());//after cookie, session
+
+//Set session // after sessionsa
+app.use(function(req, res, next){
+  res.locals.admin = req.session.admin;
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
