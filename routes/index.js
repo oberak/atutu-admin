@@ -40,6 +40,28 @@ router.get('/init', function(req, res, next) {
       });
 });
 
+/* Insert sample data */
+// TODO have to delete
+var Category = require('../models/Category');
+router.get('/samples', function(req, res, next){
+    // make model using req.body
+    var data = [
+        {name: {my:'my-Education', en:'Education'}, use:{ c:true, e:true, v: true}, dispOrder:0},
+        {name: {my:'my-House', en:'House'}, use:{ c:true, e:true, v: true}, dispOrder:1},
+        {name: {my:'my-Health', en:'Health'}, use:{ c:true, e:true, v: false}, dispOrder:2},
+        {name: {my:'my-Children', en:'Children'}, use:{ c:true, e:false, v: true}, dispOrder:3},
+        {name: {my:'my-Buddhism', en:'Buddhism'}, use:{ c:false, e:true, v: true}, dispOrder:4},
+    ];
+
+    // save to database using Model
+    console.log('save data', data);
+    Category.insertMany(data, function(err, docs){
+        if(err) throw err;
+        console.log('result', docs);
+        res.end('ok');
+    });
+});
+
 router.post('/signin', function(req, res, next) {
   var user = new User();
   // make model using req.body
