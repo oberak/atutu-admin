@@ -1,7 +1,8 @@
+<<<<<<< current
 var express = require('express');
 var router = express.Router();
 var User = require('../model/User');
-
+var Category = require('../models/Category');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -40,6 +41,28 @@ router.get('/init', function(req, res, next) {
       });
 });
 
+/* Insert sample data */
+// TODO have to delete
+var Category = require('../models/Category');
+router.get('/samples', function(req, res, next){
+    // make model using req.body
+    var data = [
+        {name: {my:'ပညာရေး', en:'Education'}, use:{ c:true, e:true, v: true}, dispOrder:0},
+        {name: {my:'ဘိုးဘွားရိပ်သာ', en:'Assisted Living Facility'}, use:{ c:true, e:true, v: true}, dispOrder:1},
+        {name: {my:'ကျန်းမာရေး', en:'Health'}, use:{ c:true, e:true, v: false}, dispOrder:2},
+        {name: {my:'ကလေးများပြုစုစောင့်ရှောက်ရေး', en:'Children care'}, use:{ c:true, e:false, v: true}, dispOrder:3},
+
+    ];
+
+    // save to database using Model
+    console.log('save data', data);
+    Category.insertMany(data, function(err, docs){
+        if(err) throw err;
+        console.log('result', docs);
+        res.end('ok');
+    });
+});
+
 router.post('/signin', function(req, res, next) {
   var user = new User();
   // make model using req.body
@@ -58,4 +81,45 @@ router.post('/signin', function(req, res, next) {
   });
 });
 
+router.get('/category', function(req,res,next){
+    var query = {};
+    Category.find(query,function(err,rtn){
+        if (err) throw err;
+            res.render('campaign/category',{
+                user:rtn,
+            });
+    });
+
+});
+
+router.get('/category', function(req, res, next) {
+    res.render('admin/campaign/category')
+});
+router.post('/category', function(req, res, next) {
+    User.find({}).limit(10).exec(function(err,doc){
+        if(err) res.json(500, {'err': err.message});
+        console.log(doc);
+         res.json({users:doc});
+    });
+    });
+    router.post('/view/:id', function(req, res, next) {
+        User.findOne({
+            _id: req.params.id
+        }, function(err, rtn) {
+            if (err) res.json(500, {'err': err.message});
+             else res.json({user:rtn});
+        });
+    });
+
 module.exports = router;
+=======
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+module.exports = router;
+>>>>>>> before discard

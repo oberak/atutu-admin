@@ -9,7 +9,7 @@
 
 
     [Table of contents]
-    
+
     1. Import google fonts
     2. Third-party plugins vendors
     3. Import config and template variables
@@ -20,14 +20,14 @@
 
 -------------------------------------------------------------------*/
 /*-----
-    [Import google fonts] 
-    
+    [Import google fonts]
+
     Imported: Roboto, Oswald
 -----*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Oswald:400,500,600,700");
 /*-----
-    [Third-party plugins vendors] 
-    
+    [Third-party plugins vendors]
+
     1. Animate.css
     2. Bootstrap 4.*
     3. Linearicons
@@ -5038,7 +5038,7 @@ button.close {
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-top .arrow::after,
   .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 1px;
@@ -5058,7 +5058,7 @@ button.close {
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-right .arrow::after,
   .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 1px;
@@ -5075,7 +5075,7 @@ button.close {
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-bottom .arrow::after,
   .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 1px;
@@ -5104,7 +5104,7 @@ button.close {
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-left .arrow::after,
   .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 1px;
@@ -12713,18 +12713,18 @@ a.text-dark:hover, a.text-dark:focus {
 Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
 */
 /*
-CONTENTS: 
-	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
-	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+CONTENTS:
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited).
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar.
 	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
-	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
-	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
-	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars.
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars.
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
 */
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-1. BASIC STYLE  
+1. BASIC STYLE
 ------------------------------------------------------------------------------------------------------------------------
 */
 .mCustomScrollbar {
@@ -12751,9 +12751,9 @@ CONTENTS:
   width: auto;
   height: auto; }
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-2. VERTICAL SCROLLBAR 
+2. VERTICAL SCROLLBAR
 y-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
@@ -12859,9 +12859,9 @@ y-axis
 .mCSB_scrollTools .mCSB_buttonDown {
   bottom: 0; }
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-3. HORIZONTAL SCROLLBAR 
+3. HORIZONTAL SCROLLBAR
 x-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
@@ -12936,10 +12936,10 @@ x-axis
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
   right: 0; }
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-4. VERTICAL AND HORIZONTAL SCROLLBARS 
-yx-axis 
+4. VERTICAL AND HORIZONTAL SCROLLBARS
+yx-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
 .mCSB_container_wrapper {
@@ -13004,9 +13004,9 @@ yx-axis
 .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
   margin-bottom: 0; }
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-5. TRANSITIONS  
+5. TRANSITIONS
 ------------------------------------------------------------------------------------------------------------------------
 */
 .mCSB_scrollTools,
@@ -13029,14 +13029,14 @@ yx-axis
   -o-transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
   transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; }
 
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 ------------------------------------------------------------------------------------------------------------------------
 */
-/* 
+/*
 	----------------------------------------
-	6.1 THEMES 
+	6.1 THEMES
 	----------------------------------------
 	*/
 /* default theme ("light") */
@@ -13099,15 +13099,15 @@ yx-axis
 
 .mCSB_scrollTools .mCSB_buttonUp {
   background-position: 0 0;
-  /* 
-		sprites locations 
+  /*
+		sprites locations
 		light: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px
 		dark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px
 		*/ }
 
 .mCSB_scrollTools .mCSB_buttonDown {
   background-position: 0 -20px;
-  /* 
+  /*
 		sprites locations
 		light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
 		dark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
@@ -13115,16 +13115,16 @@ yx-axis
 
 .mCSB_scrollTools .mCSB_buttonLeft {
   background-position: 0 -40px;
-  /* 
-		sprites locations 
+  /*
+		sprites locations
 		light: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px
 		dark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px
 		*/ }
 
 .mCSB_scrollTools .mCSB_buttonRight {
   background-position: 0 -56px;
-  /* 
-		sprites locations 
+  /*
+		sprites locations
 		light: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px
 		dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px
 		*/ }
@@ -14695,7 +14695,7 @@ html.lb-disable-scrolling {
   opacity: 1; }
 
 /*-----
-    [Import config and template variables]    
+    [Import config and template variables]
 -----*/
 /*------------------------------------------------------------------
 
@@ -14705,7 +14705,7 @@ html.lb-disable-scrolling {
     Version:        v1.0.0
     Last change:    17/05/18 [Release]
 
-    
+
     [Table of contents]
 
     1. Main typography variables
@@ -14723,23 +14723,23 @@ html.lb-disable-scrolling {
 
 -------------------------------------------------------------------*/
 /*-----
-    [Main typography variables] 
+    [Main typography variables]
 -----*/
 /*-----
     [Animation settings]
-        
+
     1. Set $animation: 0; to disable all template animations;
     2. $animationPanelSpeed animation speed for panel appear/disappear;
     3. Set $shadows: 1; to get shadows on elements(Not fully supported in v1.0.0);
 */
 /*-----
     [Header settings]
-    
+
     1. Basic header height;
 -----*/
 /*-----
     [Container settings]
-    
+
     1. Basic container height;
 -----*/
 /*-----
@@ -14751,29 +14751,29 @@ html.lb-disable-scrolling {
 -----*/
 /*-----
     [Sidepanel settings]
-    
+
     1. Basic sidepanel width;
 -----*/
 /*-----
     [Fixed panel settings]
-    
+
     1. Basic fixed panel width;
 -----*/
 /*-----
     [Important container]
-    
+
     1. Basic container width;
 -----*/
 /*-----
     [Other variables]
-    
+
     1. Default global border radius;
     2. Global border color;
     3. Template logo width;
 -----*/
 /*-----
     [Boxed layout settings]
-    
+
     1. Default boxed width. You can use width in px or %;
     2. Default background for boxed layout option;
     3. Boxed layout vertical spacing;
@@ -14781,13 +14781,13 @@ html.lb-disable-scrolling {
 -----*/
 /*-----
     [Indent layout settings]
-    
+
     1. Indent layout spacing(around);
     2. Default background for indent layout option;
     3. Indent layout border radius for .page wrapper, and other top level containers;
 -----*/
 /*-----
-    [Basic template colors]        
+    [Basic template colors]
 -----*/
 /*-----
     [Import template skin variables]
@@ -14834,8 +14834,8 @@ html.lb-disable-scrolling {
 /* Navigation */
 /* Form elements and components */
 /*-----
-    [Import other vendors (using variables)]    
-    
+    [Import other vendors (using variables)]
+
     1. Bootstrap datetimepicker
     2. Daterangepicker
     3. Select2
@@ -19513,7 +19513,7 @@ be a descendant of the grid when it is being dragged.
   content: "\f123"; }
 
 /*-----
-    [Import template helpers]    
+    [Import template helpers]
 -----*/
 /*------------------------------------------------------------------
 
@@ -20172,7 +20172,7 @@ be a descendant of the grid when it is being dragged.
 
 /* ./knob */
 /*-----
-    [Import main template components and features]    
+    [Import main template components and features]
 -----*/
 /*------------------------------------------------------------------
 
@@ -20315,16 +20315,16 @@ small {
 
 
     [Table of contents]
-    
+
     1. Boxed layout
     2. Indent layout
 
 -------------------------------------------------------------------*/
 /*-----
     [Boxed layout]
-    
+
     Append classes to body element to change layout option and settings
-    
+
     .boxed - boxed layout (important)
         + .boxed--vspace    - [modify] adds vertical margins
         + .boxed--rounded   - [modify] adds border-radius with support for all layout components (only with boxed--vspace)
@@ -20392,9 +20392,9 @@ body.boxed {
 
 /*-----
     [Indent layout]
-    
+
     Append classes to body element to change layout option and settings
-    
+
     .indent - indent layout (important)
         + .indent--single-header    - [modify] adds space between header & content
         + .indent--relative-header  - [modify] allows you to use page-heading below header
@@ -20519,7 +20519,7 @@ body.indent {
     Project:        The Right Way
     Version:        v1.0.0
     Last change:    17/05/18 [Release]
-    
+
 
     [Table of contents]
 
@@ -20536,9 +20536,9 @@ body.indent {
 -------------------------------------------------------------------*/
 /*-----
     [Page]
-    
+
     Main page wrapper
-    
+
     * body
         + Page / .page
             - Page header / .page__header
@@ -20563,22 +20563,22 @@ body.indent {
     -----*/
   /*-----
         [Header inside / .page.page--w-header]
-    
+
         Modification for page. Header inside .page wrapper
     -----*/
   /*-----
         [Container inside / .page.page--w-container]
-    
+
         Modification for page, page__container inside .page
     -----*/
   /*-----
         [Fixed header option / .page.page--w-fixed-header]
-    
+
         Modification for page, fixed position of page__header
     -----*/
   /*-----
         [Header inside / .page.page--w-header-inside]
-    
+
         Modification for page, header inside .page-content wrapper
     -----*/
   /*-----
@@ -20903,14 +20903,14 @@ body.indent {
     Project:        The Right Way
     Version:        v1.0.0
     Last change:    17/05/18 [Release]
-    
-    
+
+
     [Table of contents]
-    
+
     1. Page header
     2. Page header title
     3. Page header search
-    
+
 -------------------------------------------------------------------*/
 /*-----
     [Page header]
@@ -20918,10 +20918,10 @@ body.indent {
     Universal head container
 
     + Page header       / .page__header
-        - Logo holder   / .logo-holder 
+        - Logo holder   / .logo-holder
         - Box           / .box - liquid container(width goes to 0%);
         - Container     / .container - liquid container(width goes to 100%);
-    
+
     Page header title   / .page-header-title
     Page header search  / .page-header-search
 -----*/
@@ -20965,6 +20965,7 @@ body.indent {
 /*-----
     [Page header search]
 -----*/
+
 .page-header-search {
   position: relative; }
   .page-header-search .form-control {
@@ -21039,27 +21040,27 @@ body.indent {
 
     Project:        The Right Way
     Version:        v1.0.0
-    Last change:    17/05/18 [Release]    
-    
-    
+    Last change:    17/05/18 [Release]
+
+
     [Table of contents]
-    
+
     1. Logo holder
     2. Media for logo holder
 
 -------------------------------------------------------------------*/
 /*-----
     [Logo holder]
-    
-    Container for logo    
-    
+
+    Container for logo
+
     + .logo-holder              - wrapper
         & .logo-holder--xl      - [modify] extra large logo container
         & .logo-holder--lg      - [modify] large logo container
         & .logo-holder--wide    - [modify] wide logo container
 
         + .logo                 - container for image logo
-        + .logo-text            - container for text logo        
+        + .logo-text            - container for text logo
 -----*/
 .logo-holder {
   float: left;
@@ -21168,11 +21169,11 @@ body.indent {
 
     Project:        The Right Way
     Version:        v1.0.0
-    Last change:    17/05/18 [Release]    
-    
+    Last change:    17/05/18 [Release]
+
 
     [Table of contents]
-    
+
     1. Login container
 
 -------------------------------------------------------------------*/
@@ -21224,14 +21225,14 @@ body.indent {
     Project:        The Right Way
     Version:        v1.0.0
     Last change:    17/05/18 [Release]
-    
-    
+
+
     [Table of contents]
-    
+
     1. Navigation settings
     2. Basic navigation
     3. Horizontal navigation
-    
+
 -------------------------------------------------------------------*/
 /*-----
 
@@ -21816,14 +21817,14 @@ body.indent {
     Project:        The Right Way
     Version:        v1.0.0
     Last change:    17/05/18 [Release]
-    
-    
+
+
     Universal head container
 
     + Page heading / .page-heading
         - Container / .page-heading__container - container for content
         - Breadcrumb / .breadcrumb - bootstrap breadcrumb support
-    
+
 -------------------------------------------------------------------*/
 /*-----
     [Page heading / .page-heading]
@@ -21961,11 +21962,11 @@ body.indent {
 
     Project:        The Right Way
     Version:        v1.0.0
-    Last change:    17/05/18 [Release]    
-    
-    
+    Last change:    17/05/18 [Release]
+
+
     [Table of contents]
-    
+
     1. Backdrop
     2. Loading
     3. Divider
@@ -21979,11 +21980,11 @@ body.indent {
     11. Icon box
     12. Credit card
     13. FAQ list
-    14. Timeline    
+    14. Timeline
 
 -------------------------------------------------------------------*/
 /*-----
-    [Backdrop]     
+    [Backdrop]
 -----*/
 .backdrop {
   position: fixed;
@@ -21994,7 +21995,7 @@ body.indent {
   z-index: 999;
   background: rgba(0, 0, 0, 0.8);
   /*-----
-        [.backdrop--mtransparent lower transparency]     
+        [.backdrop--mtransparent lower transparency]
     -----*/ }
   .backdrop--mtransparent {
     background: rgba(0, 0, 0, 0.1); }
@@ -22003,7 +22004,7 @@ body.indent {
 
 /*-----
     [Loading]
-    
+
     Loading layer for all containers
 
     .loading - wrapper
@@ -22013,7 +22014,7 @@ body.indent {
         & .loading--text       - [modify] adds container with text
 
     .preloading - spcial state for container before loading
-    
+
 -----*/
 .loading {
   position: absolute;
@@ -22114,13 +22115,13 @@ body.indent {
 
 /*-----
     [Divider]
-    
+
     Simple divider for all containers
 
     .divider - wrapper
         & .divider--sm      - [modify] small vertical margins
         & .divder--lg       - [modify] large vertical margins
-        & .divder--dashed   - [modify] changes solid line to dashed    
+        & .divder--dashed   - [modify] changes solid line to dashed
 -----*/
 .divider {
   width: 100%;
@@ -22162,7 +22163,7 @@ body.indent {
 
 /*-----
     [Text divider]
-    
+
     Divider with text for any container
 
     .divider-text - wrapper
@@ -22199,13 +22200,13 @@ body.indent {
 
 /*-----
     [Page loader]
-    
+
     Page loader layer
 
     .page-loader                            - wrapper
         & .page-loader--animation           - adds animations
         & .page-loader--animation-primary   - adds animations with primary color
-        + .page-loader__spinner             - spinner 
+        + .page-loader__spinner             - spinner
 -----*/
 body {
   /*-----
@@ -22266,9 +22267,9 @@ body {
       animation: fadeOut 200ms linear; }
 
 /*-----
-    [Back to top]    
+    [Back to top]
 
-    Back to top button        
+    Back to top button
 -----*/
 .back_to_top {
   position: fixed;
@@ -22311,10 +22312,10 @@ body {
       line-height: 40px; }
 
 /*-----
-    [Rw progress]    
-    
+    [Rw progress]
+
     Simple progress with sections
-    
+
     .rw-progress                  - wrapper
         & .rw-progress--secondary - [modify] background to secondary theme color
         & .rw-progress--animation - [modify] adds apear animation
@@ -22370,15 +22371,15 @@ body {
     margin: 8px 0px; }
 
 /*-----
-    [Rw informative progress]    
-    
+    [Rw informative progress]
+
     Progress bar container with text
-    
+
     .rw-informative-progress                    - wrapper
         & .rw-informative-progress--bordered    - [modify] adds borders
         & .rw-informative-progress--rounded     - [modify] adds border radius
         + .bar                                  - progress line
-        + .text                                 - container for text        
+        + .text                                 - container for text
 -----*/
 .rw-informative-progress {
   position: relative;
@@ -22442,10 +22443,10 @@ body {
     border-radius: 3px; }
 
 /*-----
-    [Tag]    
-    
+    [Tag]
+
     Simple template tag
-    
+
     .tag - wrapper
         & .tag--transparent - [modify] adds trasparent background
         & .tag--sm          - [modify] small size
@@ -22494,9 +22495,9 @@ body {
 
 /*-----
     [Form features]
-    
+
     Simple bootstrap extension for form elements
-    
+
     .form-control-element                         - wrapper
         + .form-control-element__box              - absolute container for elements
             & .form-control-element__box--pretify - [modify] pretify box
@@ -22564,11 +22565,11 @@ body {
 
 /*-----
     [Icon box]
-    
+
     Container for icons
-    
+
     .icon-box                   - wrapper
-        & .icon-box--inline     - [modify] inline element        
+        & .icon-box--inline     - [modify] inline element
         & .icon-box--sm         - [modify] small box size
         & .icon-box--lg         - [modify] large box size
         & .icon-box--xlg        - [modify] extra large box size
@@ -22647,9 +22648,9 @@ body {
 
 /*-----
     [Credit card]
-    
+
     Credi card container
-    
+
     .credit-card                - wrapper
         + .credit-card__number  - Container for credit card number
 -----*/
@@ -22678,8 +22679,8 @@ body {
         text-align: right; }
 
 /*-----
-    [FAQ list]        
-    
+    [FAQ list]
+
     .list-faq                           - wrapper
         + .list-faq-item                - list item
             + .list-faq-item-title      - title
@@ -22759,8 +22760,8 @@ body {
       margin-bottom: 0px; }
 
 /*-----
-    [Timeline]        
-    
+    [Timeline]
+
     .timeline               - wrapper
         & .timeline--right  - [modify] right elements position
         & .timeline--simple - [modify] simplify timeline
@@ -22770,7 +22771,7 @@ body {
             + .dot          - dot
             + .content      - content container
         + .timeline__more   - more button
-        
+
 -----*/
 .timeline {
   padding: 0px 0px;
@@ -22984,19 +22985,19 @@ body {
     Project:        The Right Way
     Version:        v1.0.0
     Last change:    17/05/18 [Release]
-    
+
 
     [Table of contents]
-    
+
     1. Widget
     2. Informer
 
 -------------------------------------------------------------------*/
 /*-----
     [Widget]
-    
+
     Basic template widget
-    
+
     + .widget                       - wrapper
         & .widget--items-middle     - [modify] middle position for all elements
         & .widget--box              - [modify] box widget mode
@@ -23209,9 +23210,9 @@ body {
 
 /*-----
     [Informer]
-    
+
     Basic template informer
-    
+
     + .informer                     - wrapper
         & .informer--icon           - [modify] informer with icon
         & .informer--icon-right     - [modify] right icon position
@@ -23301,7 +23302,7 @@ body {
     Project:        The Right Way
     Version:        v1.0.0
     Last change:    17/05/18 [Release]
-    
+
     [Table of contents]
 
     1. User
@@ -23311,7 +23312,7 @@ body {
 /*-----
 
     [User]
-    
+
     User box with image and text iformation
 
     + .user                 - wrapper
@@ -23325,8 +23326,8 @@ body {
 
         + .user__name       - name container
         + .user__button     - button container
-    
-    .user-group             - container for user boxes    
+
+    .user-group             - container for user boxes
 -----*/
 .user {
   /*-----
@@ -23606,17 +23607,17 @@ body {
 
     Project:        The Right Way
     Version:        v1.0.0
-    Last change:    17/05/18 [Release]    
-    
+    Last change:    17/05/18 [Release]
+
 
     [Table of contents]
-    
-    1. RW Button    
+
+    1. RW Button
 
 -------------------------------------------------------------------*/
 /*-----
     [RW Button]
-    
+
     Special buttons for template
 
     .rw-btn                 - wrapper
@@ -23758,8 +23759,8 @@ body {
 
     Project:        The Right Way
     Version:        v1.0.0
-    Last change:    17/05/18 [Release]    
-    
+    Last change:    17/05/18 [Release]
+
 
     [Table of contents]
 
@@ -23768,12 +23769,12 @@ body {
 -------------------------------------------------------------------*/
 /*-----
     [Switch button]
-    
+
     Custom radio and checkbox style
 
     .switch                 - wrapper
         & .switch-lg        - [modify] large switch button
-        & .switch-sm        - [modify] small switch button   
+        & .switch-sm        - [modify] small switch button
 -----*/
 .switch {
   cursor: pointer;
@@ -23861,11 +23862,11 @@ body {
 
     Project:        The Right Way
     Version:        v1.0.0
-    Last change:    17/05/18 [Release]    
-    
-    
+    Last change:    17/05/18 [Release]
+
+
     [Table of contents]
-    
+
     1. Form elements
     2. Card
     3. Nav bar and pills
@@ -23885,7 +23886,7 @@ body {
     17. Progress
 
 -------------------------------------------------------------------*/
-/*----- 
+/*-----
     [Form elements]
 ------*/
 .form-group {
@@ -24019,7 +24020,7 @@ select.form-control-sm, .input-group-sm > select.form-control,
       line-height: 20px;
       padding: 9px; }
 
-/*----- 
+/*-----
     [Card]
 ------*/
 .card {
@@ -24119,7 +24120,7 @@ select.form-control-sm, .input-group-sm > select.form-control,
 .card-group .card {
   box-shadow: none; }
 
-/*----- 
+/*-----
     [Nav bar and pills]
 ------*/
 .card-header-tabs {
@@ -24164,7 +24165,7 @@ select.form-control-sm, .input-group-sm > select.form-control,
   background: #ff2d2d;
   color: #FFF; }
 
-/*----- 
+/*-----
     [List group]
 ------*/
 .list-group .list-group-item {
@@ -24239,13 +24240,13 @@ select.form-control-sm, .input-group-sm > select.form-control,
     .list-group .list-group-item.list-group-item-dark.list-group-item-action:hover:not(.disabled), .list-group .list-group-item.list-group-item-dark.list-group-item-action:focus:not(.disabled) {
       background: #07070a; }
 
-/*----- 
+/*-----
     [Btn group]
 ------*/
 .btn-group {
   width: 100%; }
 
-/*----- 
+/*-----
     [Backgrounds]
 ------*/
 .bg-primary {
@@ -24272,7 +24273,7 @@ select.form-control-sm, .input-group-sm > select.form-control,
 .bg-dark {
   background: #121119 !important; }
 
-/*----- 
+/*-----
     [Buttons]
 ------*/
 .btn {
@@ -24675,7 +24676,7 @@ select.form-control-sm, .input-group-sm > select.form-control,
 button.close {
   cursor: pointer; }
 
-/*----- 
+/*-----
     [Input groups]
 ------*/
 .input-group-prepend .input-group-text,
@@ -24742,7 +24743,7 @@ button.close {
 .form-group > .input-group {
   margin-bottom: 0px; }
 
-/*----- 
+/*-----
     [Dropdowns]
 ------*/
 .dropdown-menu {
@@ -24796,7 +24797,7 @@ button.close {
   .dropdown-menu .dropdown-header {
     padding: 10px 15px 10px; }
 
-/*----- 
+/*-----
     [Alerts]
 ------*/
 .alert {
@@ -24855,7 +24856,7 @@ button.close {
     .alert.alert-dark hr {
       border-color: rgba(0, 0, 0, 0.1); }
 
-/*----- 
+/*-----
     [Badges]
 ------*/
 .badge {
@@ -24947,7 +24948,7 @@ button.close {
     .badge.badge-pill:after {
       display: none; }
 
-/*----- 
+/*-----
     [Modals]
 ------*/
 .modal-content {
@@ -24962,7 +24963,7 @@ button.close {
   .modal-content--bordered {
     border: 10px solid rgba(0, 0, 0, 0.1); }
 
-/*----- 
+/*-----
     [Popover]
 ------*/
 .popover {
@@ -24977,7 +24978,7 @@ button.close {
   .popover .popover-body {
     padding: 10px 15px; }
 
-/*----- 
+/*-----
     [Validation]
 ------*/
 .was-validated .form-control:valid, .form-control.is-valid, .was-validated
@@ -25002,7 +25003,7 @@ button.close {
 .custom-control-input.is-invalid ~ .custom-control-description {
   color: #ba3030; }
 
-/*----- 
+/*-----
     [Tables]
 ------*/
 .table {
@@ -25068,7 +25069,7 @@ button.close {
       .table.table-indent-rows tbody td:last-child, .table.table-indent-rows tbody th:last-child {
         border-right: 1px solid #d7dde3; }
 
-/*----- 
+/*-----
     [Pagination]
 ------*/
 .pagination {
@@ -25110,7 +25111,7 @@ button.close {
     min-width: 30px;
     font-size: 12px; }
 
-/*----- 
+/*-----
     [Progress]
 ------*/
 .progress {
@@ -25135,10 +25136,10 @@ button.close {
     Last change:    17/05/18 [Release]
 
     We recommend you to use this file for your stylesheets.
-    
+
 -------------------------------------------------------------------*/
 /*-----
-    [Import invert template skin]    
+    [Import invert template skin]
 -----*/
 /*------------------------------------------------------------------
 
