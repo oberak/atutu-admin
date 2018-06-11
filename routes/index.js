@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../model/User');
+var Category = require('../models/Category');
+
 
 
 /* GET home page. */
@@ -46,11 +48,11 @@ var Category = require('../models/Category');
 router.get('/samples', function(req, res, next){
     // make model using req.body
     var data = [
-        {name: {my:'my-Education', en:'Education'}, use:{ c:true, e:true, v: true}, dispOrder:0},
-        {name: {my:'my-House', en:'House'}, use:{ c:true, e:true, v: true}, dispOrder:1},
-        {name: {my:'my-Health', en:'Health'}, use:{ c:true, e:true, v: false}, dispOrder:2},
-        {name: {my:'my-Children', en:'Children'}, use:{ c:true, e:false, v: true}, dispOrder:3},
-        {name: {my:'my-Buddhism', en:'Buddhism'}, use:{ c:false, e:true, v: true}, dispOrder:4},
+        {name: {my:'ပညာရေး', en:'Education'}, use:{ c:true, e:true, v: true}, dispOrder:0},
+        {name: {my:'အိမ်', en:'House'}, use:{ c:true, e:true, v: true}, dispOrder:1},
+        {name: {my:'ကျန်းမာရေး', en:'Health'}, use:{ c:true, e:true, v: false}, dispOrder:2},
+        {name: {my:'ကလေးများ', en:'Children'}, use:{ c:true, e:false, v: true}, dispOrder:3},
+        {name: {my:'ဗုဒ္ဓဘာသာ', en:'Buddhism'}, use:{ c:false, e:true, v: true}, dispOrder:4},
     ];
 
     // save to database using Model
@@ -79,5 +81,41 @@ router.post('/signin', function(req, res, next) {
     }// user exists
   });
 });
+
+/* manage category */
+/*router.all('/category', function(req, res, next){
+  var query = {};
+
+  if (req.body.keyword ) {
+  var query = { $or: [ {name: {'$regex': req.body.keyword, '$options': 'i'}},
+                       {use: {'$regex': req.body.keyword}},
+                       {dispOrder: {'$regex': req.body.keyword}}
+
+                      ]
+              };
+    }
+  Category.find(query, function(err, data){
+    if(err) throw err;
+    res.render('campaign/category', {users: data});
+  });
+});*/
+
+router.get('/category', function(req, res, next) {
+  res.render('campaign/category');
+});
+
+router.post('/category', function(req, res, next) {
+  Category.find({}, function(err, doc){
+    if(err) res.json(500, {'err': err.message});
+    else res.json({ users: doc});
+  });
+});
+
+router.post('/view/:id', function(req, res, next) {
+  Category.findById(req.params.id, function(err, rtn){
+      if(err) es.json(500, {'err': err.message});
+      else res.json({ user: rtn});
+    });
+  });
 
 module.exports = router;
