@@ -23,40 +23,12 @@
                         <div class="user user--bordered user--lg user--w-lineunder user--controls">
                             <img src="http://via.placeholder.com/128x128">
                             <div class="user__name">
-                                <strong>Dmitry Ivaniuk</strong><br>
+                                <strong>Nay Linn Oo</strong><br>
                                 <span class="text-muted">Administrator</span>
-
-                                <div class="user__controls">
-                                    <div class="dropdown">
-                                        <button class="btn btn-light btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-cog"></span></button>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Profile</a>
-                                            <a class="dropdown-item" href="#">Projects</a>
-                                            <a class="dropdown-item" href="#">Invoices</a>
-                                            <a class="dropdown-item" href="#">Settings</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Log out</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="user__lineunder">
                                 <div class="text">
                                     Last visit 15min ago
-                                </div>
-                                <div class="buttons">
-                                    <div class="dropdown">
-                                        <button class="button button-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Profile</a>
-                                            <a class="dropdown-item" href="#">Projects</a>
-                                            <a class="dropdown-item" href="#">Invoices</a>
-                                            <a class="dropdown-item" href="#">Settings</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Log out</a>
-                                        </div>
-                                    </div>
-                                    <div class="button button-minimize" data-action="aside-minimize" data-toggle="tooltip" data-placement="top" data-original-title="Minimize navigation"></div>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +36,7 @@
                             <ul>
                                 <li class="title">Main</li>
                                 <li>
-                                    <a href="index.html">
+                                    <a href="">
                                         <span class="icon li-home"></span>
                                         <span class="text">Home</span>
                                     </a>
@@ -72,18 +44,23 @@
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-document"></span>
+                                        <span class="icon fa fa-copy"></span>
                                         <span class="text">Management Campaign</span>
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="pages-user-contacts.html" class="no-icon">
+                                            <a href="campaign-list" class="no-icon">
                                                 <span class="text">Campaign List</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="pages-user-profile.html" class="no-icon">
+                                            <a href="report-list" class="no-icon">
                                                 <span class="text">Campaign Report List</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="campaign-detail" class="no-icon">
+                                                <span class="text">Campaign Detail View</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -91,42 +68,66 @@
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-document"></span>
+                                        <span class="icon fa fa-dollar"></span>
                                         <span class="text">Manage Point</span>
                                     </a>
+                                    <ul>
+                                      <li>
+                                          <a href="point-transfer" class="no-icon">
+                                              <span class="text">Point Transfer</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="point-history" class="no-icon">
+                                              <span class="text">Point Transfer History</span>
+                                          </a>
+                                      </li>
+                                    </ul>
                                 </li>
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-document"></span>
+                                        <span class="icon fa fa-clipboard"></span>
                                         <span class="text">Manage Hot Event</span>
                                     </a>
                                 </li>
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-document"></span>
+                                        <span class="icon fa fa-clone"></span>
                                         <span class="text">Manage Charities</span>
                                     </a>
                                 </li>
 
-                                <li class="openable">
-                                    <a href="#">
-                                        <span class="icon li-document"></span>
+                                <li>
+                                    <a href="category">
+                                        <span class="icon fa fa-file-text-o"></span>
                                         <span class="text">Manage Categories</span>
                                     </a>
                                 </li>
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-document"></span>
+                                        <span class="icon li-user"></span>
                                         <span class="text">Manage Users</span>
                                     </a>
+                                    <ul>
+                                      <li>
+                                          <a href="user-list" class="no-icon">
+                                              <span class="text">User List</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="user-detail" class="no-icon">
+                                              <span class="text">User Detail</span>
+                                          </a>
+                                      </li>
+                                    </ul>
                                 </li>
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-document"></span>
+                                        <span class="icon fa fa-envelope"></span>
                                         <span class="text">Mail</span>
                                     </a>
                                 </li>
@@ -136,30 +137,28 @@
                 </div>
                 <!-- //END PAGE ASIDE PANEL -->
 
+                <!-- SIDEPANEL -->
+                <div class="page-sidepanel" id="page-sidepanel">
+                    <div class="page-sidepanel__content">
 
+                        <!-- QUICK PAGE NAVIGATION -->
+                        <div class="navigation navigation--quick preloading">
+                            <ul id="navigation-quick">
+                                <li class="title">Current page navigation</li>
+                            </ul>
+                        </div>
+                        <!-- //END QUICK PAGE NAVIGATION -->
+
+                    </div>
+                    <div class="page-sidepanel__button page-sidepanel__button--lower" data-action="sidepanel-hide"><div></div></div>
+                </div>
+                <!-- //END SIDEPANEL -->
 
                 <!-- PAGE CONTENT CONTAINER -->
                 <div class="content" id="content">
 
                     <!-- PAGE HEADING -->
-                    <div class="page-heading">
-                        <div class="page-heading__container">
-                            <div class="icon">
-                                <span class="li-menu-square"></span>
-                            </div>
-                            <h1 class="title">Default tables</h1>
-                            <p class="caption">The Right Way - Admin Template</p>
-                        </div>
 
-                        <nav aria-label="breadcrumb" role="navigation">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="#">Components</a></li>
-                                <li class="breadcrumb-item"><a href="#">Tables</a></li>
-                                <li class="breadcrumb-item active">Default tables</li>
-                            </ol>
-                        </nav>
-                    </div>
                     <!-- //END PAGE HEADING -->
                     <div class="container-fluid">
 
