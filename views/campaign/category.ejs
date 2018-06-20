@@ -5,26 +5,12 @@
       <% include ../partial/head %>
         <title>ATUTU Admin</title>
     </head>
+
     <body>
 
         <!-- PAGE WRAPPER -->
         <div class="page page--w-header">
-
-            <!-- PAGE HEADER -->
-            <header class="page__header">
-                <div class="logo-holder">
-                    <a href="/" class="logo-text d-none d-lg-block"><strong class="text-primary">#</strong> <strong>ATUTU Admin</strong></a>
-                    <a href="/" class="logo-text d-lg-none"><strong class="text-primary">#</strong><strong>RW</strong></a>
-                    <div class="rw-btn rw-btn--nav" data-action="aside-hide"><span></span></div>
-                </div>
-
-                <div class="box-fluid">
-
-                </div>
-
-            </header>
-            <!-- //END PAGE HEADER -->
-
+          <% include ../partial/header %>
             <!-- PAGE CONTENT WRAPPER -->
             <div class="page__content page__content--w-aside-fixed" id="page-content">
 
@@ -88,48 +74,61 @@
                                         <span class="icon li-document"></span>
                                         <span class="text">Management Campaign</span>
                                     </a>
-
+                                    <ul>
+                                        <li>
+                                            <a href="pages-user-contacts.html" class="no-icon">
+                                                <span class="text">Campaign List</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pages-user-profile.html" class="no-icon">
+                                                <span class="text">Campaign Report List</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-group-work"></span>
-                                        <span class="text">Management Point</span>
+                                        <span class="icon li-document"></span>
+                                        <span class="text">Manage Point</span>
                                     </a>
+                                </li>
 
+                                <li class="openable">
+                                    <a href="#">
+                                        <span class="icon li-document"></span>
+                                        <span class="text">Manage Hot Event</span>
+                                    </a>
                                 </li>
 
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-laptop-phone"></span>
-                                        <span class="text">Management Hot Event</span>
+                                        <span class="icon li-document"></span>
+                                        <span class="text">Manage Charities</span>
                                     </a>
+                                </li>
 
-                                </li>
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-pen-add"></span>
-                                        <span class="text">Management Charity</span>
+                                        <span class="icon li-document"></span>
+                                        <span class="text">Manage Categories</span>
                                     </a>
                                 </li>
+
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-layers"></span>
-                                        <span class="text">Management Categories</span>
+                                        <span class="icon li-document"></span>
+                                        <span class="text">Manage Users</span>
                                     </a>
                                 </li>
+
                                 <li class="openable">
                                     <a href="#">
-                                        <span class="icon li-pie-chart"></span>
-                                        <span class="text">Management Users</span>
-                                    </a>
-                                </li>
-                                <li class="openable">
-                                    <a href="#">
-                                        <span class="icon li-menu-square"></span>
+                                        <span class="icon li-document"></span>
                                         <span class="text">Mail</span>
                                     </a>
-                            </li>
+                                </li>
                             </ul>
                     </div>
                     </div>
@@ -145,7 +144,7 @@
                     <div class="page-heading">
                         <div class="page-heading__container">
                             <div class="icon">
-                                <span class="li-menu-square"></span>
+                                <span class="li-menu-square" id="btnSearch"></span>
                             </div>
                             <h1 class="title">Default tables</h1>
                             <p class="caption">The Right Way - Admin Template</p>
@@ -163,59 +162,35 @@
                     <!-- //END PAGE HEADING -->
 
                     <div class="container-fluid">
-                        <div class="card-container">
-                            <div class="box">
-                            <form class="page-header-search" id="header_search">
-                            <input type="text" class="form-control" placeholder="Type in to search">
-                            <div class="page-header-search__icon"></div>
-                            </form>
-                            </div>
-                        </div>
+
 
                         <div class="card">
+                            <div class="card-container">
+                              <div class="box">
+                                  <form class="page-header-search" id="header_search">
+                                  <input type="text" class="form-control" placeholder="Type in to search">
+                                  <div class="page-header-search__icon"></div>
+                                </form>
+                              </div>
+                            </div>
                             <div class="card-body">
+
                                 <h4 id="rw-tb-default">Management Categories</h4>
-
-                                <div class="table-responsive">
-                                    <%
-                                        var dispSort = {};
-                                        %>
-                                    <table class="table margin-bottom-0">
-                                    <thead>
-                                        <tr>
-                                            <th onclick="sort('name')">No <%= (dispSort.no)?dispSort.no:''%></th>
-                                            <th onclick="sort('name')" colspan="2">NAME <%= (dispSort.name)?dispSort.name:''%></th>
-                                            <th onclick="sort('content')" colspan="3">CONTENT <%= (dispSort.content)?dispSort.content:''%></th>
-                                            <th onclick="sort('function')" colspan="2">FUNCTION <%= (dispSort.function)?dispSort.function:''%></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <% if (user.length == 0){%>
-                                          <tr>
-                                            <th scope="row">1</th>
-                                            <td colspan="3">Data not found</td>
-                                          </tr>
-                                        <%} else {
-                                              for(var i=1; i< user.length; i++){%>
-                                          <tr onclick="detail('<%= user[i]._id %>');">
-
-                                              <td><%= user[i].dispOrder %></td>
-                                              <td><%= user[i].name.my %></td>
-                                              <td><%= user[i].name.en %></td>
-                                              <td><%= user[i].use.c %></td>
-                                              <td><%= user[i].use.e %></td>
-                                              <td><%= user[i].use.v %></td>
-
-                                          </tr>
-                                        <%}
-                                      }
-                                      %>
-                                    </tbody>
-                                </table>
+                                <div class="body table-responsive">
+                                    <table class="table table-striped table-hover" style="cursor: pointer;">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th onclick="sort('name')" colspan="2">Name</th>
+                                                <th onclick="sort('use')" colspan="3">Content</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="dTable">
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <!-- //END PAGE CONTENT CONTAINER -->
@@ -224,61 +199,104 @@
             <!-- //END PAGE CONTENT -->
 
         </div>
-
-
-                    <div class="card margin-bottom-0">
-                        <div class="card-body">
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <h4 id="rw-md-form">Form example</h4>
-                                    <p class="subtitle margin-bottom-20">Basically modal window supports all elements and features. So you can use whatever you want inside.</p>
-
-                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#formExampleModal">Launch modal</button>
-                                </div>
-                                <div class="col-6">
-                                    <h4 id="rw-md-form-invert">Invert Form example</h4>
-                                    <p class="subtitle margin-bottom-20">Same example with invered style.</p>
-
-                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#invertFormExampleModal">Launch modal</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
         <!-- //END PAGE WRAPPER -->
-        <% include ../partial/script %>
-        <script type="text/javascript">
-        $(function () {
-            $modal=$("#modal");
-            btnSearch.onclick = function(){
-                console.log('click');
-                $.ajax({
-                    method: "POST",
-                    url : "/campaign/category",
-                    data:{name:"John", location:"Boston"}
-                }).done(function(rtn){
-                    var dTable = document.getElementById('dTable');
-                    for(var i = 0; i< rtn.users.length ; i++){
-                        var row = dTable.insertRow(dTable.rows.length);
-                        var cell0 = row.insertCell(0);
-                        cell0.appendChild(document.createTextNode(i+1));
-                        var cell1 = row.insertCell(1);
-                        cell1.appendChild(document.createTextNode(rtn.users[i].name));
-                        var cell2 = row.insertCell(2);
-                        cell2.appendChild(document.createTextNode(rtn.users[i].use));
-                        row.setAttribute('data-row-key', rtn.users[i]._id);
-                        row.onclick = function(e){
-                            view($(this).attr('data-row-key'));
-                        }
-                    }
-                }). fail(function(err){
-                    console.log('ERROR',err);
-                });
 
+        <!-- Large Size -->
+              <div class="modal fade" id="modal">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header" style="background-color:lightblue">
+                        <h5 class="modal-title" id="exampleModalLabel">Modify Category</h5>
+                    </div>
+                    <div class="modal-body" style="height:150px;">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Myanmar Name</th>
+                            <th>English Name</th>
+                            <th>Campaign</th>
+                            <th>Hot Event</th>
+                            <th>Charities</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input type="text" name="" id="myanmarname" value=""></td>
+                            <td><input type="text" name="" id="englishname" value=""></td>
+                            <td><input type="checkbox" name="" id="campaign" value=""></td>
+                            <td><input type="checkbox" name="" id="hotevent" value=""></td>
+                            <td><input type="checkbox" name="" id="volunteer" value=""></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="modal-footer" style="background-color:lightblue" method="post">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" >Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% include ../partial/script %>
+        <!-- Demo Js -->
+        <script src="/js/demo.js"></script>
+        <script type="text/javascript">
+          $(function () {
+
+              $modal = $("#modal");
+            btnSearch.onclick = function(){
+              $.ajax({
+                method: "POST",
+                url: "/category",
+                data: {name: "Jhon", location: "Boston"}
+              }).done(function( rtn ){
+                var dTable = document.getElementById('dTable');
+                for(var i=0; i< rtn.users.length; i++){
+                  var row = dTable.insertRow(dTable.rows.length);
+                  var cell0 = row.insertCell(0);
+                  cell0.appendChild(document.createTextNode(i+1));
+                  var cell1 = row.insertCell(1);
+                  cell1.appendChild(document.createTextNode(rtn.users[i].name.my));
+                  var cell2 = row.insertCell(2);
+                  cell2.appendChild(document.createTextNode(rtn.users[i].name.en));
+                  var cell3 = row.insertCell(3);
+                  cell3.appendChild(document.createTextNode(rtn.users[i].use.c));
+                  var cell4 = row.insertCell(4);
+                  cell4.appendChild(document.createTextNode(rtn.users[i].use.e));
+                  var cell5 = row.insertCell(5);
+                  cell5.appendChild(document.createTextNode(rtn.users[i].use.v));
+                  row.setAttribute('data-row-key', rtn.users[i]._id);
+                  row.onclick = function(e){
+                    view($(this).attr('data-row-key'));
+                  }
+                }
+              }).fail(function(err){
+                console.log('ERROR',err);
+              });
             }
+
+            function view(id){
+              $modal.modal('show');
+              $.ajax({
+                method: "POST",
+                url: "/view/"+id
+              }).done(function( rtn ){
+                console.log(rtn);
+                var user = rtn.user;
+                document.getElementById('myanmarname').value = user.name.my;
+                document.getElementById('englishname').value = user.name.en;
+                document.getElementById('campaign').checked = user.use.c;
+                document.getElementById('hotevent').checked = user.use.e;
+                document.getElementById('volunteer').checked = user.use.v;
+                //document.getElementById('volunteer').value = user.use.v;
+            }).fail(function(err){
+              console.log('ERROR', err);
+            });
+          }
+          });
+          function detail(id){
+            location.href = '/view/'+id;
+          }
         </script>
     </body>
-
 </html>

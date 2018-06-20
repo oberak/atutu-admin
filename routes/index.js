@@ -1,8 +1,9 @@
-<<<<<<< current
 var express = require('express');
 var router = express.Router();
 var User = require('../model/User');
 var Category = require('../models/Category');
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -47,11 +48,11 @@ var Category = require('../models/Category');
 router.get('/samples', function(req, res, next){
     // make model using req.body
     var data = [
-        {name: {my:'ပညာရေး', en:'Education'}, use:{ c:true, e:true, v: true}, dispOrder:0},
-        {name: {my:'ဘိုးဘွားရိပ်သာ', en:'Assisted Living Facility'}, use:{ c:true, e:true, v: true}, dispOrder:1},
+        {name: {my:'ပညာရေး', en:'Education'}, use:{ c:true, e:false, v: false}, dispOrder:0},
+        {name: {my:'အိမ်', en:'House'}, use:{ c:true, e:true, v: true}, dispOrder:1},
         {name: {my:'ကျန်းမာရေး', en:'Health'}, use:{ c:true, e:true, v: false}, dispOrder:2},
-        {name: {my:'ကလေးများပြုစုစောင့်ရှောက်ရေး', en:'Children care'}, use:{ c:true, e:false, v: true}, dispOrder:3},
-
+        {name: {my:'ကလေးများ', en:'Children'}, use:{ c:true, e:false, v: true}, dispOrder:3},
+        {name: {my:'ဗုဒ္ဓဘာသာ', en:'Buddhism'}, use:{ c:false, e:true, v: true}, dispOrder:4},
     ];
 
     // save to database using Model
@@ -61,6 +62,33 @@ router.get('/samples', function(req, res, next){
         console.log('result', docs);
         res.end('ok');
     });
+});
+router.get('/campaign-list',function(req,res,next){
+    res.render('campaign/campaign-list')
+});
+
+router.get('/report-list', function(req,res,next){
+    res.render('campaign/report-list')
+});
+
+router.get('/user-list', function(req,res,next){
+    res.render('campaign/user-list')
+});
+
+router.get('/point-transfer', function(req,res,next){
+    res.render('campaign/point-transfer')
+});
+
+router.get('/point-history', function(req,res,next){
+    res.render('campaign/point-history')
+});
+
+router.get('/campaign-detail', function(req,res,next){
+    res.render('campaign/campaign-detail')
+});
+
+router.get('/user-detail', function(req,res,next){
+    res.render('campaign/user-detail')
 });
 
 router.post('/signin', function(req, res, next) {
@@ -81,45 +109,40 @@ router.post('/signin', function(req, res, next) {
   });
 });
 
-router.get('/category', function(req,res,next){
-    var query = {};
-    Category.find(query,function(err,rtn){
-        if (err) throw err;
-            res.render('campaign/category',{
-                user:rtn,
-            });
-    });
+/* manage category */
+/*router.all('/category', function(req, res, next){
+  var query = {};
 
-});
+  if (req.body.keyword ) {
+  var query = { $or: [ {name: {'$regex': req.body.keyword, '$options': 'i'}},
+                       {use: {'$regex': req.body.keyword}},
+                       {dispOrder: {'$regex': req.body.keyword}}
+
+                      ]
+              };
+    }
+  Category.find(query, function(err, data){
+    if(err) throw err;
+    res.render('campaign/category', {users: data});
+  });
+});*/
 
 router.get('/category', function(req, res, next) {
-    res.render('admin/campaign/category')
+  res.render('campaign/category');
 });
+
 router.post('/category', function(req, res, next) {
-    User.find({}).limit(10).exec(function(err,doc){
-        if(err) res.json(500, {'err': err.message});
-        console.log(doc);
-         res.json({users:doc});
-    });
-    });
-    router.post('/view/:id', function(req, res, next) {
-        User.findOne({
-            _id: req.params.id
-        }, function(err, rtn) {
-            if (err) res.json(500, {'err': err.message});
-             else res.json({user:rtn});
-        });
-    });
-
-module.exports = router;
-=======
-var express = require('express');
-var router = express.Router();
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  Category.find({}, function(err, doc){
+    if(err) res.json(500, {'err': err.message});
+    else res.json({ users: doc});
+  });
 });
 
+router.post('/view/:id', function(req, res, next) {
+  Category.findById(req.params.id, function(err, rtn){
+      if(err) es.json(500, {'err': err.message});
+      else res.json({ user: rtn});
+    });
+  });
+
 module.exports = router;
->>>>>>> before discard

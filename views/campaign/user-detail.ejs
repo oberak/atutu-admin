@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partial/head %>
+        <title>ATUTU Admin</title>
+</head>
+<style media="screen">
+    #user-profile {
+        border-radius: 10px;
+    }
+    .detail{
+        padding-left: 520px;
+    }
+    .detail1{
+        padding-left: 300px;
+    }
+    .creator{
+        padding-left: 300px;
+    }
+    .creator1{
+        padding-left: 450px;
+    }
+    .list{
+    padding-left: 1000px;
+    }
+</style>
+
+<body>
+
+    <!-- PAGE WRAPPER -->
+    <div class="page page--w-header">
+        <% include ../partial/header %>
+            <!-- PAGE CONTENT WRAPPER -->
+            <div class="page__content page__content--w-aside-fixed" id="page-content">
+
+                <!-- PAGE ASIDE PANEL -->
+                <div class="page-aside invert" id="page-aside">
+                    <div class="scroll" style="max-height: 100%">
+                        <div class="navigation" id="navigation-default">
+
+                            <div class="user user--bordered user--lg user--w-lineunder user--controls">
+                                <img src="http://via.placeholder.com/128x128">
+                                <div class="user__name">
+                                    <strong>Dmitry Ivaniuk</strong><br>
+                                    <span class="text-muted">Administrator</span>
+
+                                    <div class="user__controls">
+                                        <div class="dropdown">
+                                            <button class="btn btn-light btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-cog"></span></button>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Profile</a>
+                                                <a class="dropdown-item" href="#">Projects</a>
+                                                <a class="dropdown-item" href="#">Invoices</a>
+                                                <a class="dropdown-item" href="#">Settings</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Log out</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user__lineunder">
+                                    <div class="text">
+                                        Last visit 15min ago
+                                    </div>
+                                    <div class="buttons">
+                                        <div class="dropdown">
+                                            <button class="button button-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Profile</a>
+                                                <a class="dropdown-item" href="#">Projects</a>
+                                                <a class="dropdown-item" href="#">Invoices</a>
+                                                <a class="dropdown-item" href="#">Settings</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Log out</a>
+                                            </div>
+                                        </div>
+                                        <div class="button button-minimize" data-action="aside-minimize" data-toggle="tooltip" data-placement="top" data-original-title="Minimize navigation"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <ul>
+                                <li class="title">Main</li>
+                                <li>
+                                <a href="index.html">
+                                    <span class="icon li-home"></span>
+                                    <span class="text">Home</span>
+                                </a>
+                                </li>
+                                <li class="openable">
+                                <a href="#">
+                                    <span class="icon li-document"></span>
+                                    <span class="text">Management Campaign</span>
+                                </a>
+                                <ul>
+                                <li class="openable">
+                                <a href="#" class="no-icon">
+                                    <span class="text">Campaign List</span>
+                                </a>
+                                </li>
+                                <li class="openable">
+                                <a href="#" class="no-icon">
+                                    <span class="text">Campaign Detail View</span>
+                                </a>
+                                </li>
+                                <li class="openable">
+                                <a href="#" class="no-icon">
+                                    <span class="text">Campaign Detail View</span>
+                                </a>
+                                </li>
+                                </ul>
+                                </li>
+                                <li class="openable">
+                                <a href="#">
+                                    <span class="icon li-group-work"></span>
+                                    <span class="text">Management Point</span>
+                                </a>
+
+                                <ul>
+                                <li class="openable">
+                                <a href="#" class="no-icon">
+                                    <span class="text">Point Transfer</span>
+                                </a>
+                                </li>
+                                <li class="openable">
+                                <a href="#" class="no-icon">
+                                    <span class="text">Point Transfer History</span>
+                                </a>
+                                </li>
+                                </ul>
+                                </li>
+                                <li class="openable">
+                                <a href="#">
+                                    <span class="icon li-laptop-phone"></span>
+                                    <span class="text">Management Hot Event</span>
+                                </a>
+                                </li>
+                                <li class="openable">
+                                <a href="#">
+                                    <span class="icon li-pen-add"></span>
+                                    <span class="text">Management Charities</span>
+                                </a>
+                                </li>
+                                <li>
+                                <a href="#">
+                                    <span class="icon li-layers"></span>
+                                    <span class="text">Management Categories</span>
+                                </a>
+                                </li>
+                                <li class="openable">
+                                <a href="#">
+                                    <span class="icon li-pie-chart"></span>
+                                    <span class="text">Management Users</span>
+                                </a>
+                                <ul>
+                                <li>
+                                <a href="charts-chartjs.html" class="no-icon">
+                                    <span class="text">User List</span>
+                                </a>
+                                </li>
+                                <li>
+                                <a href="charts-echarts.html" class="no-icon">
+                                    <span class="text">User Detail</span>
+                                </a>
+                                </li>
+                                </ul>
+                                </li>
+                                <li class="openable">
+                                <a href="#">
+                                    <span class="icon li-menu-square"></span>
+                                    <span class="text">Mail</span>
+                                </a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <!-- //END PAGE ASIDE PANEL -->
+
+
+
+                <!-- PAGE CONTENT CONTAINER -->
+                <div class="content" id="content">
+
+                    <!-- PAGE HEADING -->
+                    
+                    <!-- //END PAGE HEADING -->
+                    <div class="container-fluid">
+                        <h1 id="rw-tb-default">User Detail</h1>
+                    </div>
+                    <!-- //END PAGE CONTENT CONTAINER -->
+
+                    <!-- //END PAGE CONTENT -->
+
+                </div>
+
+            </div>
+    </div>
+    <!-- //END PAGE WRAPPER -->
+        <% include ../partial/script %>
+            <div class="card">
+            <div class="card-body">
+             <div id="user-profile">
+                <center><img src="/img/signin.jpg" alt="profile photo"></center>
+            </div>
+            </div>
+            <div class="detail">
+                <h3>Email:&nbsp&nbsp&nbsp&nbsp user@gmail.com</h3>
+                <h3>ID:&nbsp&nbsp&nbsp&nbsp happy</h3>
+                <h3>Birthday Date:&nbsp&nbsp&nbsp&nbsp 4.4.1996</h3>
+                <h3>Address:&nbsp&nbsp&nbsp&nbsp Pathein</h3>
+                <h3>Phone Number:&nbsp&nbsp&nbsp&nbsp 0999</h3>
+                <h3>Active Point:&nbsp&nbsp&nbsp&nbsp 40,000points</h3>
+                <h3>Total Donation Amount:&nbsp&nbsp&nbsp&nbsp 40,000points</h3>
+                <h3>Join Date:&nbsp&nbsp&nbsp&nbsp 20.5.2018</h3>
+                <h3>Last Login:&nbsp&nbsp&nbsp&nbsp 20.5.2010</h3>
+            </div>
+            </div>
+
+        <div class="card">
+        <div class="card-body">
+        <center><h1 id="rw-lg-js">Creator at Campaign</h1></center>
+        <div class="creator">
+          <div class="row margin-bottom-30">
+              <div class="col-12 col-lg-3">
+                  <a tabindex="0" class="btn btn-light btn-block" role="button" data-toggle="popover" data-trigger="hover" title="Children care" data-content="Category:Children,Location:Pathein,Progress:89%,End date:22.4.2019">
+                      Children care
+                  </a>
+              </div>
+              <div class="col-12 col-lg-3">
+                  <a tabindex="0" class="btn btn-light btn-block" role="button" data-toggle="popover" data-trigger="hover" title="Children care" data-content="Category:Children,Location:Pathein,Progress:89%,End date:22.4.2019">
+                      Children care
+                  </a>
+              </div>
+              <div class="col-12 col-lg-3">
+                  <a tabindex="0" class="btn btn-light btn-block" role="button" data-toggle="popover" data-trigger="hover" title="Children care" data-content="Category:Children,Location:Pathein,Progress:89%,End date:22.4.2019">
+                      Children care
+                  </a>
+              </div>
+              <div class="col-12 col-lg-3">
+                  <a tabindex="0" class="btn btn-light btn-block" role="button" data-toggle="popover" data-trigger="hover" title="Children care" data-content="Category:Children,Location:Pathein,Progress:89%,End date:22.4.2019">
+                      Children care
+                  </a>
+              </div>
+
+          </div>
+          <ul class="creator1">
+            <span class="fa fa-angle-double-left"></span>
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+             <span class="fa fa-angle-double-right"></span>
+          </ul>
+
+          </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+         <center><h1 id="rw-lg-js">Member at event</h1></center>
+         <div class="creator">
+                  <div class="row margin-bottom-30">
+                      <div class="col-12 col-lg-3">
+                          <a tabindex="0" class="btn btn-light btn-block" role="button" >
+                              Children care
+                          </a>
+                      </div>
+                      <div class="col-12 col-lg-3">
+                          <a tabindex="0" class="btn btn-light btn-block" role="button">
+                              Children dream
+                          </a>
+                      </div>
+                      <div class="col-12 col-lg-3">
+                          <a tabindex="0" class="btn btn-light btn-block" role="button">
+                              Children care
+                          </a>
+                      </div>
+                      <div class="col-12 col-lg-3">
+                          <a tabindex="0" class="btn btn-light btn-block" role="button">
+                              Children health
+                          </a>
+                      </div>
+
+                  </div>
+                  <ul class="creator1">
+                    <span class="fa fa-angle-double-left"></span>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <span class="fa fa-angle-double-right"></span>
+                  </ul>
+              </div>
+          </div>
+        </div>
+        <div class="list">
+            <div class="row margin-bottom-8">
+            <div class="col-6 col-lg-8">
+            <button type="button" class="btn btn-warning btn-block"><h4>Go to list</h4></button>
+            </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

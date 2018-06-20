@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partial/head %>
+        <title>ATUTU Admin</title>
+</head>
+
+<body>
+
+    <!-- PAGE WRAPPER -->
+    <div class="page page--w-header">
+        <% include ../partial/header %>
+            <!-- PAGE CONTENT WRAPPER -->
+            <div class="page__content page__content--w-aside-fixed" id="page-content">
+
+                <!-- PAGE ASIDE PANEL -->
+                <div class="page-aside invert" id="page-aside">
+                    <div class="scroll" style="max-height: 100%">
+                        <div class="navigation" id="navigation-default">
+
+                            <div class="user user--bordered user--lg user--w-lineunder user--controls">
+                                <img src="http://via.placeholder.com/128x128">
+                                <div class="user__name">
+                                    <strong>Dmitry Ivaniuk</strong><br>
+                                    <span class="text-muted">Administrator</span>
+
+                                    <div class="user__controls">
+                                        <div class="dropdown">
+                                            <button class="btn btn-light btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-cog"></span></button>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Profile</a>
+                                                <a class="dropdown-item" href="#">Projects</a>
+                                                <a class="dropdown-item" href="#">Invoices</a>
+                                                <a class="dropdown-item" href="#">Settings</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Log out</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user__lineunder">
+                                    <div class="text">
+                                        Last visit 15min ago
+                                    </div>
+                                    <div class="buttons">
+                                        <div class="dropdown">
+                                            <button class="button button-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Profile</a>
+                                                <a class="dropdown-item" href="#">Projects</a>
+                                                <a class="dropdown-item" href="#">Invoices</a>
+                                                <a class="dropdown-item" href="#">Settings</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Log out</a>
+                                            </div>
+                                        </div>
+                                        <div class="button button-minimize" data-action="aside-minimize" data-toggle="tooltip" data-placement="top" data-original-title="Minimize navigation"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <ul>
+                        <li class="title">
+                        Main</li>
+                        <li>
+                        <a href="index.html">
+                            <span class="icon li-home"></span>
+                            <span class="text">Home</span>
+                        </a>
+
+                        </li>
+                        <li class="openable">
+                        <a href="#">
+                            <span class="icon li-document"></span>
+                            <span class="text">Management Campaign</span>
+                        </a>
+                        <ul>
+                        <li class="openable">
+                        <a href="#" class="no-icon">
+                            <span class="text">Campaign List</span>
+                        </a>
+                        </li>
+                        <li class="openable">
+                        <a href="#" class="no-icon">
+                            <span class="text">Campaign Detail View</span>
+                        </a>
+                        </li>
+                        <li class="openable">
+                        <a href="#" class="no-icon">
+                            <span class="text">Campaign Detail View</span>
+                        </a>
+                        </li>
+                        </ul>
+                        </li>
+
+                        <li class="openable">
+                        <a href="#">
+                            <span class="icon li-group-work"></span>
+                            <span class="text">Management Point</span>
+                        </a>
+
+                        <ul>
+                        <li class="openable">
+                        <a href="#" class="no-icon">
+                            <span class="text">Point Transfer</span>
+                        </a>
+                        </li>
+                        <li class="openable">
+                        <a href="#" class="no-icon">
+                            <span class="text">Point Transfer History</span>
+                            </a>
+                        </li>
+
+                        </ul>
+                        </li>
+
+                        <li class="openable">
+                        <a href="#">
+                            <span class="icon li-laptop-phone"></span>
+                            <span class="text">Management Hot Event</span>
+                        </a>
+
+                        </li>
+                        <li class="openable">
+                        <a href="#">
+                            <span class="icon li-pen-add"></span>
+                            <span class="text">Management Charities</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                            <span class="icon li-layers"></span>
+                            <span class="text">Management Categories</span>
+                        </a>
+                        </li>
+
+                        <li class="openable">
+                        <a href="#">
+                        <span class="icon li-pie-chart"></span>
+                            <span class="text">Management Users</span>
+                        </a>
+                        <ul>
+                        <li>
+                        <a href="charts-chartjs.html" class="no-icon">
+                            <span class="text">User List</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="charts-echarts.html" class="no-icon">
+                            <span class="text">User Detail</span>
+                        </a>
+                        </li>
+                        </ul>
+                        </li>
+                        <li class="openable">
+                        <a href="#">
+                            <span class="icon li-menu-square"></span>
+                            <span class="text">Mail</span>
+                        </a>
+                        </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- //END PAGE ASIDE PANEL -->
+
+
+
+                <!-- PAGE CONTENT CONTAINER -->
+                <div class="content" id="content">
+
+                    <!-- PAGE HEADING -->
+                    
+                    <!-- //END PAGE HEADING -->
+                    <div class="container-fluid">
+                        <h1 id="rw-tb-default">Campaign Detail</h1>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="container-fluid">
+                                        <div class="col-30 col-md-15 col-lg-15 gallery-item sport">
+                                            <div class="row">
+                                                <div class="col-10 col-lg-10">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="http://via.placeholder.com/600x450" alt="Card image cap">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h4 class="card-title">Brief</h4>
+                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content. Some
+                                                                quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-row margin-top-20">
+                                        <div class="col-4 col-lg-2">
+                                            <div class="col-18 col-lg-10">
+                                                <div class="row">
+                                                    <h2>Campaign Name</h2>
+                                                    <p>Health care</p>
+                                                </div>
+                                                <div class="row">
+                                                    <h2>Category</h2>
+                                                    <p>Health</p>
+                                                </div>
+                                                <div class="row">
+                                                    <h2>Start Date</h2>
+                                                    <p>12.3.2018</p>
+                                                </div>
+                                                <div class="row">
+                                                    <h2>End Date</h2>
+                                                    <p>12.7.2018</p>
+                                                </div>
+                                                <div class="row">
+                                                    <h2>Targement Ammount</h2>
+                                                    <p>40,000Kyats</p>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <h2>Campaign Creator Information</h2>
+                                                    <p>Name:</p>
+                                                    <p>Email:</p>
+                                                    <p>Phone:</p>
+                                                </div>
+                                            </div>
+
+                                            <h2>Tags</h2>
+                                            <p>
+                                                <span class="tag tag--transparent tag--block tag--sm">Health</span>
+                                                <span class="tag tag--transparent tag--block tag--sm">Education</span>
+                                            </p>
+
+
+                                            <h2>Share</h2>
+                                            <ul class="social-nav">
+                                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </div>
+                    </div>
+                    </table>
+                    <hr>
+                    <h1>Description</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+
+                    <div class="card nav-tabs-cardtop">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab-1" data-toggle="tab" href="#home-1" role="tab" aria-controls="comments" aria-selected="true">Comments</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab-1" data-toggle="tab" href="#profile-1" role="tab" aria-controls="donor-list" aria-selected="false">Donor List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab-1" data-toggle="tab" href="#contact-1" role="tab" aria-controls="report-list" aria-selected="false">Report List</a>
+                            </li>
+                        </ul>
+                        <div class="card-body">
+                            <div class="tab-content margin-top-15" id="myTabContent">
+                                <div class="tab-pane fade" id="home-1" role="tabpanel" aria-labelledby="home-tab-1">
+                                    <h4 id="rw-lg-basic">John</h4>
+                                    <p class="subtitle margin-bottom-20">Simple bootstrap inline nav element. Simple bootstrap inline nav element.</p>
+
+                                    <ul class="nav margin-bottom-30">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">LIKE</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">REPLY</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">BLOCK</a>
+                                        </li>
+                                    </ul>
+                                    <h4 id="rw-lg-basic">Smith</h4>
+                                    <p class="subtitle margin-bottom-20">Simple bootstrap inline nav element. Simple bootstrap inline nav element.</p>
+
+                                    <ul class="nav margin-bottom-30">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">LIKE</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">REPLY</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">BLOCK</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="profile-1" role="tabpanel" aria-labelledby="profile-tab-1">
+                                    <div class="margin-bottom-30">
+                                        <div class="user user--huge">
+                                              <img src="http://via.placeholder.com/128x128">
+                                               <div class="col-3 col-lg-2">&nbsp;</div>
+                                               &nbsp;
+                                              Donor Name
+                                               &nbsp;
+                                              20,000Ks
+                                              &nbsp;
+                                              12.4.2018
+                                        </div>
+                                    </div>
+
+                                    <div class="margin-bottom-30">
+                                        <div class="user user--huge">
+                                              <img src="http://via.placeholder.com/128x128">
+                                               <div class="col-3 col-lg-2">&nbsp;</div>
+                                               &nbsp;
+                                              Donor Name
+                                               &nbsp;
+                                              20,000Ks
+                                              &nbsp;
+                                              12.4.2018
+                                             </div>
+                                      </div>
+                                     </div>
+                                <div class="tab-pane fade" id="contact-1" role="tabpanel" aria-labelledby="contact-tab-1">
+                                    <div class="user user--rounded user--bordered user--xlg margin-bottom-20">
+                                                <img src="http://via.placeholder.com/128x128">
+                                                <div class="user__name">
+                                                    <strong>User Name</strong><br>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-2 col-lg-1">&nbsp;</div>
+                        <div class="col-4 col-lg-2">
+                            <button type="button" class="btn btn-info btn-block">Block</button>
+                        </div>
+                        <div class="col-3 col-lg-2">&nbsp;</div>
+                        <div class="col-4 col-lg-2">
+                            <button type="button" class="btn btn-info btn-block">Save</button>
+                        </div>
+                        <div class="col-3 col-lg-2">&nbsp;</div>
+                        <div class="col-4 col-lg-2">
+                            <button type="button" class="btn btn-info btn-block">Go to list</button>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- //END PAGE CONTENT CONTAINER -->
+
+                </div>
+                <!-- //END PAGE CONTENT -->
+
+            </div>
+        </div>
+            <!-- //END PAGE WRAPPER -->
+
+
+            <% include ../partial/script %>
+</body>
+
+</html>
