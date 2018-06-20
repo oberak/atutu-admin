@@ -22,11 +22,11 @@ var CategorySchema = new Schema({
         required: true,
         default: 0,
     },
-    use: {
-        c: Boolean, // campaigns
-        e: Boolean, // events
-        v: Boolean, // volunteering
-    },
+    contact: {
+        c: Boolean,
+        e: Boolean,
+        v: Boolean,
+      },
     // System fields
     isDeleted: {
         type: Boolean,

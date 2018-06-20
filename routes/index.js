@@ -1,7 +1,9 @@
 var express = require('express');
+var multer = require('multer');
 var router = express.Router();
 var User = require('../model/User');
 var Category = require('../models/Category');
+var upload = multer({ dest: 'public/upload' });
 
 
 
@@ -46,13 +48,13 @@ router.get('/init', function(req, res, next) {
 // TODO have to delete
 var Category = require('../models/Category');
 router.get('/samples', function(req, res, next){
-    // make model using req.body
+    // make model using req.bodys
     var data = [
-        {name: {my:'ပညာရေး', en:'Education'}, use:{ c:true, e:false, v: false}, dispOrder:0},
-        {name: {my:'အိမ်', en:'House'}, use:{ c:true, e:true, v: true}, dispOrder:1},
-        {name: {my:'ကျန်းမာရေး', en:'Health'}, use:{ c:true, e:true, v: false}, dispOrder:2},
-        {name: {my:'ကလေးများ', en:'Children'}, use:{ c:true, e:false, v: true}, dispOrder:3},
-        {name: {my:'ဗုဒ္ဓဘာသာ', en:'Buddhism'}, use:{ c:false, e:true, v: true}, dispOrder:4},
+        {name: {my:'ပညာရေး', en:'Education'}, contact:{ c:true, e:true, v:true }, dispOrder:0},
+        {name: {my:'အိမ်', en:'House'}, contact:{c:true, e:true, v:true}, dispOrder:1},
+        {name: {my:'ကျန်းမာရေး', en:'Health'}, contact:{ c:true, e:true, v:false}, dispOrder:2},
+        {name: {my:'ကလေးများ', en:'Children'}, contact:{ c:true, e:false, v:true}, dispOrder:3},
+        {name: {my:'ဗုဒ္ဓဘာသာ', en:'Buddhism'}, contact:{ c:false, e:true, v:true}, dispOrder:4},
     ];
 
     // save to database using Model
@@ -127,6 +129,7 @@ router.post('/signin', function(req, res, next) {
   });
 });*/
 
+//category view
 router.get('/category', function(req, res, next) {
   res.render('campaign/category');
 });
@@ -134,15 +137,70 @@ router.get('/category', function(req, res, next) {
 router.post('/category', function(req, res, next) {
   Category.find({}, function(err, doc){
     if(err) res.json(500, {'err': err.message});
-    else res.json({ users: doc});
+    else res.json({ categories: doc});
   });
 });
 
+//modify popup view
 router.post('/view/:id', function(req, res, next) {
   Category.findById(req.params.id, function(err, rtn){
-      if(err) es.json(500, {'err': err.message});
-      else res.json({ user: rtn});
+      if(err) res.json(500, {'err': err.message});
+      else res.json({ categories: rtn});
     });
   });
+
+router.post('/category/modify', function(req, res, next) {
+  Category.findById(req.body.catid, function(err, category){
+      category.name.my = req.body.myanmarname;
+      category.name.en = req.body.englishname;
+      category.contact.c = req.body.campaign;
+      category.contact.e = req.body.hotevent;
+      category.contact.v = req.body.volunteer;
+      category.save(function (err, rtn){
+      if(err) res.json(500, {'err': err.message});
+      else res.json({ Categories: rtn});
+      });
+    });
+  });
+
+  //add popup view
+  router.post('/add/:id', function(req, res, next) {
+    Category.findById(req.params.id, function(err, rtn){
+        if(err) res.json(500, {'err': err.message});
+        else res.json({ categories: rtn});
+      });
+    });
+
+  router.post('/category/add',upload.any(), function(req, res, next) {
+    var category = new Category();
+    category.name.my = req.body.myanmarname;
+    category.name.en = req.body.englishname;
+    category.contact.c = req.body.campaign;
+    category.contact.e = req.body.hotevent;
+    category.contact.v = req.body.volunteer;
+    for(var i in req.files){
+      category[req.files[i].fieldname] = '/uploads/' + req.files[i].filename;
+    }
+    category.save(function (err, rtn){
+      if(err) res.json(500, {'err': err.message});
+      else res.json({ Categories: rtn});
+        });
+      });
+
+  //delete popup view
+  router.post('/dele/:id', function(req, res, next) {
+    Category.findById(req.params.id, function(err, rtn){
+        if(err) res.json(500, {'err': err.message});
+        else res.json({ categories: rtn});
+      });
+    });
+
+    router.post('/category/dele', function(req, res, next) {
+      Category.findByIdAndRemove(req.body.catid, function(err, rtn){
+          if(err) res.json(500, {'err': err.message});
+          else res.json({ categories: rtn});
+        });
+      });
+
 
 module.exports = router;
