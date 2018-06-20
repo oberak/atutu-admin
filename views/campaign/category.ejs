@@ -165,12 +165,6 @@
 
                         <div class="card">
                             <div class="card-container">
-                              <div class="box">
-                                  <form class="page-header-search" id="header_search">
-                                  <input type="text" class="form-control" placeholder="Type in to search">
-                                  <div class="page-header-search__icon"></div>
-                                </form>
-                              </div>
                             </div>
                             <div class="card-body">
 
@@ -361,11 +355,11 @@
                 }
                 if( i == rtn.categories.length){
                   var cell8 = row.insertCell(8);
-                  var btnAdd = document.createElement("input");
-                  btnAdd.type = "button";
-                  btnAdd.value = "Add";
+                  var btnAdd = document.createElement("span");
+                  btnAdd.setAttribute("class","fa fa-plus-circle");
+                  btnAdd.setAttribute("style","font-size: 45px;");
                   cell8.appendChild(btnAdd);
-                  btnAdd.setAttribute('data-row-key', rtn.categories[i-1]._id);
+                  //btnAdd.setAttribute('data-row-key', rtn.categories[i-1]._id);
                   btnAdd.onclick = function(){
                     add($(this).attr('data-row-key'));
                   }
