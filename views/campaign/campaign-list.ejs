@@ -223,40 +223,7 @@
         <th>End Date</th>
     </tr>
 </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>Name1</td>
-            <td>Health</td>
-            <td>2</td>
-            <td>User1</td>
-            <td>20,000Ks</td>
-            <td>Active</td>
-            <td>19.2.18</td>
-            <td>19.5.18</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Name2</td>
-            <td>Health</td>
-            <td>2</td>
-            <td>User2</td>
-            <td>20,000Ks</td>
-            <td>Active</td>
-            <td>19.2.18</td>
-            <td>19.5.18</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Name3</td>
-            <td>Health</td>
-            <td>2</td>
-            <td>User3</td>
-            <td>20,000Ks</td>
-            <td>Active</td>
-            <td>19.2.18</td>
-            <td>19.5.18</td>
-        </tr>
+        <tbody id="dTable">
         </tbody>
     </table>
 <div class="container-fluid">
@@ -304,5 +271,41 @@
 
 
 <% include ../partial/script %>
+<script src="/js/demo.js"></script>
+<script type="text/javascript">
+  $(function () {
+    // select list on load
+    $.ajax({
+      method: "POST",
+      url: "/campaign-list",
+      data: {name: "Jhon", location: "Boston"}
+    }).done(function( rtn ){
+      var dTable = document.getElementById('dTable');
+      for(var i=0; i< rtn.campaigns.length; i++){
+        var row = dTable.insertRow(dTable.rows.length);
+        var cell0 = row.insertCell(0);
+        cell0.appendChild(document.createTextNode(i+1));
+        var cell1 = row.insertCell(1);
+        cell1.appendChild(document.createTextNode(rtn.campaigns[i].title));
+        var cell2 = row.insertCell(2);
+        cell2.appendChild(document.createTextNode(rtn.campaigns[i].address));
+        var cell3 = row.insertCell(3);
+        cell3.appendChild(document.createTextNode(rtn.campaigns[i].reserved));
+        var cell4 = row.insertCell(4);
+        cell4.appendChild(document.createTextNode(rtn.campaigns[i].reserved));
+        var cell5 = row.insertCell(5);
+        cell5.appendChild(document.createTextNode(rtn.campaigns[i].goal));
+        var cell6 = row.insertCell(6);
+        cell6.appendChild(document.createTextNode(rtn.campaigns[i].status));
+        var cell7 = row.insertCell(7);
+        cell7.appendChild(document.createTextNode(rtn.campaigns[i].inserted));
+        var cell8 = row.insertCell(8);
+        cell8.appendChild(document.createTextNode(rtn.campaigns[i].dueDate));
+        }
+    }).fail(function(err){
+      console.log('ERROR',err);
+    }); // end of select list
+  });
+</script>
 </body>
 </html>

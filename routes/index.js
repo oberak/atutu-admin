@@ -4,6 +4,7 @@ var router = express.Router();
 var User = require('../model/User');
 var Category = require('../models/Category');
 var upload = multer({ dest: 'public/upload' });
+var Campaign = require('../models/Campaign');
 
 
 
@@ -65,8 +66,17 @@ router.get('/samples', function(req, res, next){
         res.end('ok');
     });
 });
+
+//view campoign list
 router.get('/campaign-list',function(req,res,next){
     res.render('campaign/campaign-list')
+});
+
+router.post('/campaign-list', function(req, res, next) {
+  Campaign.find({}, function(err, doc){
+    if(err) res.json(500, {'err': err.message});
+    else res.json({ campaigns: doc});
+  });
 });
 
 router.get('/report-list', function(req,res,next){
