@@ -153,6 +153,8 @@
 <!-- //END SIDEPANEL -->
 
 <!-- PAGE CONTENT CONTAINER -->
+<form name="frm" action="/campaign-list" method="post">
+  <input type="hidden" name="currpage">
     <div class="content" id="content">
 
     <!-- PAGE HEADING -->
@@ -223,23 +225,49 @@
         <th>End Date</th>
     </tr>
 </thead>
-        <tbody id="dTable">
+        <tbody>
+          <% if(campaigns.length == 0){%>
+            <tr>
+                <th scope="row">1</th>
+                <td colspan="3">No Data Found!</td>
+            </tr>
+         <% }else {
+               for(var i=0; i< campaigns.length; i++){
+         %>
+               <tr onclick="detail('<%= campaigns[i]._id %>');">
+                 <th scope="row"><%= (i+1)+(paging.currpage-1)*paging.perpage %></th>
+                 <td><%= campaigns[i].title %></td>
+                 <td><%= campaigns[i].address %></td>
+                 <td><%= campaigns[i].tags %></td>
+                 <td><%= campaigns[i].tags %></td>
+                 <td><%= campaigns[i].goal %></td>
+                 <td><%= campaigns[i].status %></td>
+                 <td><%= campaigns[i].inserted %></td>
+                 <td><%= campaigns[i].dueDate %></td>
+               </tr>
+           <%  }
+             }
+           %>
         </tbody>
     </table>
 <div class="container-fluid">
 <div class="form-group row clearfix">
       <div class="col-md-10">
         <nav>
-            <ul class="pagination pagination--space">
-            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <ul class="pagination">
+              <li class="page-item <%= (paging.currpage == 1)? 'disabled':'' %>">
+                <a class="page-link" href="javascript:go(<%= (paging.currpage == 1)?-1:(paging.currpage-1)%>)" tabindex="-1">Prev</a>
+              </li>
+              <% for (var i=paging.start; i<= paging.end; i++){%>
+                <li class="page-item <%= (i == paging.currpage)?'active':''%>">
+                  <a class="page-link" href="javascript:go(<%=i%>)"><%=i%></a>
+                </li>
+              <%}%>
+              <li class="page-item <%= (paging.currpage == paging.total)? 'disabled':'' %>">
+                <a class="page-link" href="javascript:go(<%= (paging.currpage == paging.total)?-1:(paging.currpage+1) %>)">Next</a>
             </ul>
         </nav>
     </div>
-
     <div class="col-md-2">
       <div class="form-group">
         <select class="selectpicker form-control show-tick" name="perpage" id="perpage" size="1">
@@ -261,6 +289,7 @@
 </div>
 </div>
 </div>
+</form>
 <!-- //END PAGE CONTENT CONTAINER -->
 
 </div>
@@ -273,39 +302,15 @@
 <% include ../partial/script %>
 <script src="/js/demo.js"></script>
 <script type="text/javascript">
-  $(function () {
-    // select list on load
-    $.ajax({
-      method: "POST",
-      url: "/campaign-list",
-      data: {name: "Jhon", location: "Boston"}
-    }).done(function( rtn ){
-      var dTable = document.getElementById('dTable');
-      for(var i=0; i< rtn.campaigns.length; i++){
-        var row = dTable.insertRow(dTable.rows.length);
-        var cell0 = row.insertCell(0);
-        cell0.appendChild(document.createTextNode(i+1));
-        var cell1 = row.insertCell(1);
-        cell1.appendChild(document.createTextNode(rtn.campaigns[i].title));
-        var cell2 = row.insertCell(2);
-        cell2.appendChild(document.createTextNode(rtn.campaigns[i].address));
-        var cell3 = row.insertCell(3);
-        cell3.appendChild(document.createTextNode(rtn.campaigns[i].reserved));
-        var cell4 = row.insertCell(4);
-        cell4.appendChild(document.createTextNode(rtn.campaigns[i].reserved));
-        var cell5 = row.insertCell(5);
-        cell5.appendChild(document.createTextNode(rtn.campaigns[i].goal));
-        var cell6 = row.insertCell(6);
-        cell6.appendChild(document.createTextNode(rtn.campaigns[i].status));
-        var cell7 = row.insertCell(7);
-        cell7.appendChild(document.createTextNode(rtn.campaigns[i].inserted));
-        var cell8 = row.insertCell(8);
-        cell8.appendChild(document.createTextNode(rtn.campaigns[i].dueDate));
-        }
-    }).fail(function(err){
-      console.log('ERROR',err);
-    }); // end of select list
+  function go(page){
+    if(page == -1 || page> <%=paging.total%>) return;
+    frm.currpage.value = page;
+    frm.submit();
+  }
+  $("#perpage").change(function() {
+    frm.submit();
   });
+  $("#perpage").val(<%= paging.perpage %>);
 </script>
 </body>
 </html>

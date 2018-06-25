@@ -68,17 +68,33 @@ router.get('/samples', function(req, res, next){
 });
 
 //view campoign list
-router.get('/campaign-list',function(req,res,next){
-    res.render('campaign/campaign-list')
-});
+router.all('/campaign-list', function(req, res, next) {
+  var query = {};
 
-router.post('/campaign-list', function(req, res, next) {
-  Campaign.find({}, function(err, doc){
-    if(err) res.json(500, {'err': err.message});
-    else res.json({ campaigns: doc});
+Campaign.count(query, function(err, count){
+  var paging = {
+    currpage: Number(req.body.currpage) || 1,
+    perpage: Number(req.body.perpage) || 3,
+    count: count,
+    total: Math.ceil(count/(req.body.perpage || 3)),
+    psize: 5,
+    skip: {}
+  };
+  //ToDo start, END\
+  paging.start = (Math.ceil(paging.currpage/paging.psize)-1)*paging.psize+1;
+  paging.end = paging.start+paging.psize-1;
+  if(paging.end>paging.total) paging.end = paging.total;
+  //ToDo pre, Next
+  paging.skip.next = paging.psize * Math.ceil(paging.currpage/paging.psize) +1;
+  paging.skip.prev = paging.skip.next - paging.psize*2;
+  Campaign.find(query).skip((paging.currpage -1) * paging.perpage).limit(paging.perpage).exec(function(err, doc){
+    if(err) throw err;
+      res.render('campaign/campaign-list', {campaigns: doc, paging: paging});
+    });
   });
 });
 
+//report list view
 router.get('/report-list', function(req,res,next){
     res.render('campaign/report-list')
 });
@@ -120,24 +136,6 @@ router.post('/signin', function(req, res, next) {
     }// user exists
   });
 });
-
-/* manage category */
-/*router.all('/category', function(req, res, next){
-  var query = {};
-
-  if (req.body.keyword ) {
-  var query = { $or: [ {name: {'$regex': req.body.keyword, '$options': 'i'}},
-                       {use: {'$regex': req.body.keyword}},
-                       {dispOrder: {'$regex': req.body.keyword}}
-
-                      ]
-              };
-    }
-  Category.find(query, function(err, data){
-    if(err) throw err;
-    res.render('campaign/category', {users: data});
-  });
-});*/
 
 //category view
 router.get('/category', function(req, res, next) {
