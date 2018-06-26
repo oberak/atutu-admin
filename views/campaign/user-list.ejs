@@ -155,6 +155,8 @@
         <!-- PAGE CONTENT CONTAINER -->
         <form name="frm" action="/user-list" method="post">
         <input type="hidden" name="currpage">
+        <input type="hidden" name="sortingField" value="<%= sort.field %>">
+        <input type="hidden" name="sortingMethod" value="<%= sort.method %>">
         <div class="content" id="content">
 
         <!-- PAGE HEADING -->
@@ -177,15 +179,19 @@
         <div class="card-body">
 
         <div class="table-responsive">
+          <%
+           var dispSort = {};
+           if(sort.field) dispSort[sort.field] = (sort.method == 1)?'\u25Bc':'\u25B2';
+           %>
         <table class="table margin-bottom-0">
         <thead>
         <tr>
             <th>No</th>
-            <th>User Name</th>
-            <th>ID</th>
-            <th>Phone Number</th>
-            <th>Active Point</th>
-            <th>Join Date</th>
+            <th onclick="sort('name')">User Name <%= (dispSort.name)?dispSort.name:''%></th>
+            <th onclick="sort('id')">ID <%= (dispSort.id)?dispSort.id:''%></th>
+            <th onclick="sort('phone')">Phone Number <%= (dispSort.phone)?dispSort.phone:''%></th>
+            <th onclick="sort('_id')">Active Point <%= (dispSort._id)?dispSort._id:''%></th>
+            <th onclick="sort('email')">Join Date <%= (dispSort.email)?dispSort.email:''%></th>
         </tr>
         </thead>
         <tbody>
@@ -271,6 +277,15 @@
             frm.submit();
           });
           $("#perpage").val(<%= paging.perpage %>);
+          function sort(key){
+            if(frm.sortingField.value !=key){
+              frm.sortingMethod.value = 1;
+            }else{
+              frm.sortingMethod.value = Number(frm.sortingMethod.value)*-1;
+            }
+            frm.sortingField.value = key;
+            frm.submit();
+          }
         </script>
         </body>
         </html>

@@ -155,6 +155,8 @@
 <!-- PAGE CONTENT CONTAINER -->
 <form name="frm" action="/campaign-list" method="post">
   <input type="hidden" name="currpage">
+  <input type="hidden" name="sortingField" value="<%= sort.field %>">
+  <input type="hidden" name="sortingMethod" value="<%= sort.method %>">
     <div class="content" id="content">
 
     <!-- PAGE HEADING -->
@@ -211,18 +213,22 @@
 <div class="card-body">
 
 <div class="table-responsive">
+  <%
+   var dispSort = {};
+   if(sort.field) dispSort[sort.field] = (sort.method == 1)?'\u25Bc':'\u25B2';
+   %>
 <table class="table margin-bottom-0">
 <thead>
     <tr>
         <th>No</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Report</th>
-        <th>Create By</th>
-        <th>Target Ammount</th>
-        <th>Status</th>
-        <th>Start Date</th>
-        <th>End Date</th>
+        <th onclick="sort('title')">Name <%= (dispSort.title)?dispSort.title:''%></th>
+        <th onclick="sort('address')">Category <%= (dispSort.address)?dispSort.address:''%></th>
+        <th onclick="sort('tags')">Report <%= (dispSort.tags)?dispSort.tags:''%></th>
+        <th onclick="sort('tags')">Create By <%= (dispSort.tags)?dispSort.tags:''%></th>
+        <th onclick="sort('goal')">Target Ammount <%= (dispSort.goal)?dispSort.goal:''%></th>
+        <th onclick="sort('status')">Status <%= (dispSort.status)?dispSort.status:''%></th>
+        <th onclick="sort('inserted')">Start Date <%= (dispSort.inserted)?dispSort.inserted:''%></th>
+        <th onclick="sort('dueDate')">End Date <%= (dispSort.dueDate)?dispSort.dueDate:''%></th>
     </tr>
 </thead>
         <tbody>
@@ -311,6 +317,15 @@
     frm.submit();
   });
   $("#perpage").val(<%= paging.perpage %>);
+  function sort(key){
+    if(frm.sortingField.value !=key){
+      frm.sortingMethod.value = 1;
+    }else{
+      frm.sortingMethod.value = Number(frm.sortingMethod.value)*-1;
+    }
+    frm.sortingField.value = key;
+    frm.submit();
+  }
 </script>
 </body>
 </html>

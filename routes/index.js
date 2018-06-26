@@ -71,6 +71,14 @@ router.get('/samples', function(req, res, next){
 router.all('/campaign-list', function(req, res, next) {
   var query = {};
 
+  var sorting = {};
+  if(req.body.sortingField) sorting[req.body.sortingField] = req.body.sortingMethod;
+
+  var sort = {
+    field: req.body.sortingField || '',
+    method: req.body.sortingMethod || 1,
+  };
+
 Campaign.count(query, function(err, count){
   var paging = {
     currpage: Number(req.body.currpage) || 1,
@@ -87,9 +95,9 @@ Campaign.count(query, function(err, count){
   //ToDo pre, Next
   paging.skip.next = paging.psize * Math.ceil(paging.currpage/paging.psize) +1;
   paging.skip.prev = paging.skip.next - paging.psize*2;
-  Campaign.find(query).skip((paging.currpage -1) * paging.perpage).limit(paging.perpage).exec(function(err, doc){
+  Campaign.find(query).sort(sorting).skip((paging.currpage -1) * paging.perpage).limit(paging.perpage).exec(function(err, doc){
     if(err) throw err;
-      res.render('campaign/campaign-list', {campaigns: doc, paging: paging});
+      res.render('campaign/campaign-list', {campaigns: doc, paging: paging, sort: sort});
     });
   });
 });//end campaign list view
@@ -102,6 +110,14 @@ router.get('/report-list', function(req,res,next){
 //view user list
 router.all('/user-list', function(req, res, next) {
   var query = {};
+
+  var sorting = {};
+  if(req.body.sortingField) sorting[req.body.sortingField] = req.body.sortingMethod;
+
+  var sort = {
+    field: req.body.sortingField || '',
+    method: req.body.sortingMethod || 1,
+  };
 
 User.count(query, function(err, count){
   var paging = {
@@ -119,9 +135,9 @@ User.count(query, function(err, count){
   //ToDo pre, Next
   paging.skip.next = paging.psize * Math.ceil(paging.currpage/paging.psize) +1;
   paging.skip.prev = paging.skip.next - paging.psize*2;
-  User.find(query).skip((paging.currpage -1) * paging.perpage).limit(paging.perpage).exec(function(err, doc){
+  User.find(query).sort(sorting).skip((paging.currpage -1) * paging.perpage).limit(paging.perpage).exec(function(err, doc){
     if(err) throw err;
-      res.render('campaign/user-list', {users: doc, paging: paging});
+      res.render('campaign/user-list', {users: doc, paging: paging, sort: sort});
     });
   });
 });//end user list view
