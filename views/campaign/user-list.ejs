@@ -153,6 +153,8 @@
           <!-- //END SIDEPANEL -->
 
         <!-- PAGE CONTENT CONTAINER -->
+        <form name="frm" action="/user-list" method="post">
+        <input type="hidden" name="currpage">
         <div class="content" id="content">
 
         <!-- PAGE HEADING -->
@@ -182,65 +184,64 @@
             <th>User Name</th>
             <th>ID</th>
             <th>Phone Number</th>
-            <th>Address</th>
             <th>Active Point</th>
             <th>Join Date</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>happy</td>
-        <td>0999</td>
-        <td>Ayeyarwady,Pathein</td>
-        <td>40,000</td>
-        <td>20.3.2017</td>
-        </tr>
-        <tr>
-        <td>2</td>
-        <td>John</td>
-        <td>happy</td>
-        <td>0999</td>
-        <td>Ayeyarwady,Pathein</td>
-        <td>40,000</td>
-        <td>20.3.2017</td>
-        </tr>
-        <tr>
-        <td>3</td>
-        <td>John</td>
-        <td>happy</td>
-        <td>0999</td>
-        <td>Ayeyarwady,Pathein</td>
-        <td>40,000</td>
-        <td>20.3.2017</td>
-        </tr>
+          <% if(users.length == 0){%>
+            <tr>
+                <th scope="row">1</th>
+                <td colspan="3">No Data Found!</td>
+            </tr>
+         <% }else {
+               for(var i=0; i< users.length; i++){
+         %>
+               <tr onclick="detail('<%= users[i]._id %>');">
+                 <th scope="row"><%= (i+1)+(paging.currpage-1)*paging.perpage %></th>
+                 <td><%= users[i].name %></td>
+                 <td><%= users[i].id %></td>
+                 <td><%= users[i].phone %></td>
+                 <td><%= users[i]._id %></td>
+                 <td><%= users[i].email %></td>
+               </tr>
+           <%  }
+             }
+           %>
         </tbody>
         </table>
         <div class="container-fluid">
         <div class="form-group row clearfix">
-          <div class="col-md-10">
-            <nav>
-                <ul class="pagination pagination--space">
-                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </nav>
+              <div class="col-md-10">
+                <nav>
+                    <ul class="pagination">
+                      <li class="page-item <%= (paging.currpage == 1)? 'disabled':'' %>">
+                        <a class="page-link" href="javascript:go(<%= (paging.currpage == 1)?-1:(paging.currpage-1)%>)" tabindex="-1">Prev</a>
+                      </li>
+                      <% for (var i=paging.start; i<= paging.end; i++){%>
+                        <li class="page-item <%= (i == paging.currpage)?'active':''%>">
+                          <a class="page-link" href="javascript:go(<%=i%>)"><%=i%></a>
+                        </li>
+                      <%}%>
+                      <li class="page-item <%= (paging.currpage == paging.total)? 'disabled':'' %>">
+                        <a class="page-link" href="javascript:go(<%= (paging.currpage == paging.total)?-1:(paging.currpage+1) %>)">Next</a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <select class="selectpicker form-control show-tick" name="perpage" id="perpage" size="1">
+                  <option value="3">Show 3 entries</option>
+                  <option value="5">Show 5 entries</option>
+                  <option value="10">Show 10 entries</option>
+                  <option value="20">Show 20 entries</option>
+                  <option value="1000">Show All entries</option>
+                </select>
+              </div>
+            </div>
+        </div>
         </div>
 
-        <div class="col-md-2">
-          <div class="form-group">
-            <select class="selectpicker form-control show-tick" name="perpage" id="perpage" size="1">
-              <option value="3">Show 3 entries</option>
-              <option value="5">Show 5 entries</option>
-              <option value="10">Show 10 entries</option>
-              <option value="20">Show 20 entries</option>
-              <option value="1000">Show All entries</option>
-            </select>
-          </div>
         </div>
         </div>
         </div>
@@ -248,10 +249,7 @@
         </div>
         </div>
         </div>
-
-        </div>
-        </div>
-        </div>
+      </form>
         <!-- //END PAGE CONTENT CONTAINER -->
 
         </div>
@@ -262,5 +260,17 @@
 
 
         <% include ../partial/script %>
+        <script src="/js/demo.js"></script>
+        <script type="text/javascript">
+          function go(page){
+            if(page == -1 || page> <%=paging.total%>) return;
+            frm.currpage.value = page;
+            frm.submit();
+          }
+          $("#perpage").change(function() {
+            frm.submit();
+          });
+          $("#perpage").val(<%= paging.perpage %>);
+        </script>
         </body>
         </html>

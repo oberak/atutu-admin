@@ -92,16 +92,39 @@ Campaign.count(query, function(err, count){
       res.render('campaign/campaign-list', {campaigns: doc, paging: paging});
     });
   });
-});
+});//end campaign list view
 
 //report list view
 router.get('/report-list', function(req,res,next){
     res.render('campaign/report-list')
 });
 
-router.get('/user-list', function(req,res,next){
-    res.render('campaign/user-list')
-});
+//view user list
+router.all('/user-list', function(req, res, next) {
+  var query = {};
+
+User.count(query, function(err, count){
+  var paging = {
+    currpage: Number(req.body.currpage) || 1,
+    perpage: Number(req.body.perpage) || 3,
+    count: count,
+    total: Math.ceil(count/(req.body.perpage || 3)),
+    psize: 5,
+    skip: {}
+  };
+  //ToDo start, END\
+  paging.start = (Math.ceil(paging.currpage/paging.psize)-1)*paging.psize+1;
+  paging.end = paging.start+paging.psize-1;
+  if(paging.end>paging.total) paging.end = paging.total;
+  //ToDo pre, Next
+  paging.skip.next = paging.psize * Math.ceil(paging.currpage/paging.psize) +1;
+  paging.skip.prev = paging.skip.next - paging.psize*2;
+  User.find(query).skip((paging.currpage -1) * paging.perpage).limit(paging.perpage).exec(function(err, doc){
+    if(err) throw err;
+      res.render('campaign/user-list', {users: doc, paging: paging});
+    });
+  });
+});//end user list view
 
 router.get('/point-transfer', function(req,res,next){
     res.render('campaign/point-transfer')
